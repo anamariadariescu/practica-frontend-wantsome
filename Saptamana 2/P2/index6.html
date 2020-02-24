@@ -6,29 +6,41 @@
     <body>
         <form>
             <label for="name">Nume:</label>
-            <input type="text" name="name"> <br>
+            <input type="text" name="name" required> <br>
 
             <label for="pnume">Prenume</label>
-            <input type="text" name="pnume"> <br>
+            <input type="text" name="pnume" required> <br>
 
             <label for="gender">Sex</label>
-            <input type="text" name="gender"> <br>
+            <input type="text" name="gender" value="Feminin"> <br>
 
             <label for="ani">Varsta</label>
-            <input type="text" name="ani"> <br>
+            <input type="number" name="ani" min="18" max="85"> <br>
 
             <label for="country">Tara</label>
-            <input type="text" name="country"> <br>
+            <input type="text" name="country" value="Romania"> <br>
 
             <label for="city">Oras</label>
-            <input type="text" name="city"> <br>
+            <input type="text" name="city" value="Iasi"> <br>
 
             <label for="address">Adresa</label>
             <input type="text" name="address"> <br>
 
             <label for="cod">Cod postal</label>
             <input type="text" name="cod"> <br>
-            
+
+            <label for="mail">E-mail</label>
+            <input type="text" name="mail" required> <br>
+
+            <label for="message">Mesaj</label>
+            <input type="text" name="message"> <br>
+
+            <label for="CV">Atasare CV</label>
+            <input type="text" name="CV"> <br>
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset form"
+
         </form>
     </body>
 </html>
