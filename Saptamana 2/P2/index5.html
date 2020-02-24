@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+   <title>HTML forms</title>
+</head>
+
+<body>
+
+   <form>
+    <ul>
+        <li>
+            <label for="name">Name:</label>
+            <input type="text" name="name"> <br>
+        </li>
+        <li>
+            <label for="mail">Email:</label>
+            <input type="text" name="mail"> <br>
+        </li>
+        <li>
+            <label for="pWord">Password</label>
+            <input type="text" name="pWord"> <br> <br>
+        </li>
+        <li>
+            <label for="emotions">Please check all the emotions that apply to you:</label> <br>
+        </li>
+        
+            <ul>
+                <li>
+                    <input type="checkbox" name="emotions" value="angry">Angry <br>
+                </li>
+                <li>
+                    <input type="checkbox" name="emotions" value="sad">Sad <br>
+                </li>
+                <li>
+                    <input type="checkbox" name="emotions" value="happy">Happy <br>
+                </li>
+                <li>
+                    <input type="checkbox" name="emotions" value="ambivalent">Ambivalent <br>
+                </li>
+            </ul>
+        <li>
+            <label for="satisfied">How satisfied were you with our service?</label> <br>
+        </li>
+            <ul>
+                <li>
+                    <label for="satisfied">Very satisfied</label> 
+                    <input type="radio" name="satisfied" value="Very satisfied"> <br>
+                </li>
+                <li>
+                    <label for="satisfied">Satisfied</label>
+                    <input type="radio" name="satisfied" value="Satisfied"> <br>
+                </li>
+                <li>
+                    <label for="satisfied">Didn't care</label>
+                    <input type="radio" name="satisfied" value="Didn't care"> <br>
+                </li>
+                <li>
+                    <label for="satisfied">Dissatisfied</label>
+                    <input type="radio" name="satisfied" value="Dissatisfied"> <br>
+                </li>
+                <li>
+                    <label for="satisfied">Very dissatisfied</label>
+                    <input type="radio" name="satisfied" value="Very dissatisfied"> <br>              
+                </li>
+            </ul>
+        <li>
+            <label for="comments">Further comments:</label>
+            <textarea rows="2" cols="20"></textarea> <br>
+        </li>   
+        <li>
+            <label for="photo">Bio photo:</label>
+            <input type="text" name="photo">
+            <input type="button" value="Choose"> <br>
+        </li> 
+        <li>
+            <label for="location">Location visited:</label>
+            <select name="loc">
+                <option value="select location">Select location</option>
+            </select> <br> <br>
+      
+        </li>
+        <li>
+            <input type="submit" value="Search">
+        </li>     
+    </ul>
+
+   </form>
+
+</body>
+
+</html>
