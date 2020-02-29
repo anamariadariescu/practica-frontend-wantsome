@@ -1,0 +1,25 @@
+h1 {
+    border: 2px;
+    background: #6A6;
+    padding: 10px;
+}
+
+li {
+    margin: 15px;
+    background: DE1E7E;
+}
+
+p {
+    /* box-sizing: border-box; */
+    border: 2px dotted black;
+    background: #FB1;
+    width: 500px;
+    height: 300px;
+}
+
+a[href] {
+    border-bottom: dashed;
+    border-bottom-color: blue;
+    background: #a1a1a1;
+}
+
