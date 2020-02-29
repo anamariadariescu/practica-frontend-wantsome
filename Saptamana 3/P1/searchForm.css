@@ -1,0 +1,11 @@
+form > select:nth-of-type(2) > option {
+    color: red;
+}
+
+form > select:first-of-type > option:nth-of-type(2) {
+    color: red;
+}
+
+form {
+    background-color: pink;
+}
