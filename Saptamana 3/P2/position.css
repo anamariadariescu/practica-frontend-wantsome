@@ -1,0 +1,17 @@
+nav {
+    position: relative;
+    top: 125px;
+}
+
+section {
+    position: relative;
+    margin-left:150px;
+    border: 1px solid yellow;
+    padding: 20px;
+}
+
+footer {
+    position: fixed;
+    margin-top: 50px;
+    margin-left: 400px;
+}
