@@ -1,4 +1,5 @@
 #square1 {
+    position: absolute;
     height: 50px;
     width: 50px;
     bakground: yellow;
