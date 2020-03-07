@@ -1,0 +1,10 @@
+
+ .color {
+      color: red($color: #000000);
+      p {
+          font-size: 20px;
+          a {
+              font-weight: bold;
+          }
+  }
+}  

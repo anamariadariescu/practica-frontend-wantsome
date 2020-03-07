@@ -1,0 +1,17 @@
+@mixin reset-list {
+    margin: 5px;
+    padding: 10px;
+    list-style: none;
+  }
+
+ 
+  @mixin vertical-list {
+    
+    li {
+      display: inline-block;
+      margin: {
+        left: -2px;
+        right: 2em;
+      }
+    }
+}

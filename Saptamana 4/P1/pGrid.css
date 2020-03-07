@@ -1,0 +1,26 @@
+body {
+    text-align: center;
+    background: white;
+}
+
+ #content {
+    display: grid;
+}
+
+#content > p {
+    padding: 0 0 20px; 
+    margin: 0;
+    border-bottom: 5px solid black;
+}
+
+#content p:nth-child(3){
+    background: red;
+}
+
+#content p:nth-child(4) {
+    background: blue;
+}
+
+#content p:nth-child(7) {
+    background: yellow;
+}

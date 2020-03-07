@@ -1,0 +1,22 @@
+.color {
+  color: 0;
+}
+
+.color p {
+  font-size: 20px;
+}
+
+.color p a {
+  font-weight: bold;
+}
+
+body {
+  background: blue;
+}
+
+h1 {
+  margin: 5px;
+  padding: 10px;
+  list-style: none;
+}
+/*# sourceMappingURL=style.css.map */
