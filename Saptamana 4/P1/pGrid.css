@@ -5,12 +5,12 @@ body {
 
  #content {
     display: grid;
+    grid-gap: 5px;
 }
 
 #content > p {
     padding: 0 0 20px; 
     margin: 0;
-    border-bottom: 5px solid black;
 }
 
 #content p:nth-child(3){
