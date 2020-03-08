@@ -1,0 +1,31 @@
+body {
+    background-color: #f3ce92;
+}
+
+header, footer {
+    height: 70px;
+    background-color: rgb(64, 255, 0);
+}
+
+#main > div {
+    height: 250px;
+    width: 250px;
+}
+
+#main > div:first-child {
+    background-image: url(https://www.avantaje.ro/wp-content/uploads/2018/03/C%C3%A2nd-este-echinoc%C8%9Biul-de-prim%C4%83var%C4%83-%C3%AEn-2018.jpg)
+}
+
+#main > div:nth-child(2) {
+    background-image: url(https://www.highnorthnews.com/sites/default/files/styles/full_width_desktop/public/wp-uploads/2016/10/196190_hav_None.jpg?itok=wM8KAKRL);
+}
+
+#main > div:nth-child(3) {
+    background-image: url(https://s.iw.ro/gateway/g/ZmlsZVNvdXJjZT1odHRwJTNBJTJGJTJG/c3RvcmFnZTA2dHJhbnNjb2Rlci5yY3Mt/cmRzLnJvJTJGc3RvcmFnZSUyRjIwMTkl/MkYwOSUyRjIzJTJGMTExNjQwNV8xMTE2/NDA1X3RvYW1uYS1pbnNvcml0LWZydW56/ZS11c2NhdGUtR2V0dHlJbWFnZXMtMTAz/ODY5NjgzOC5qcGcmdz03ODAmaD00NDAm/aGFzaD0xYjgxMzM0YzhmMWYwNWFhMTVjZDc5MzE0NWIzYzQ0Nw==.thumb.jpg);
+}
+
+#main {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(64, 255, 0, 30%);
+}
