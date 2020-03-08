@@ -1,0 +1,57 @@
+nav {
+    background-color: violet;
+    height: 50px;
+}
+
+footer {
+    background-color: orange;
+    height: 50px;
+}
+
+div {
+    display: flex;
+    flex-direction: row;
+}
+
+div > section:nth-child(1) {
+    background-color: blue;
+    color: white;
+    flex: 0 0 250px;
+    height: 50px;
+}
+
+div > section:nth-child(3) {
+    background-color: chartreuse;
+    color: white;
+    flex: 0 0 250px;
+    height: 50px;
+}
+
+div > section:nth-child(2) {
+    flex: 1;
+    height: 50px;
+}
+
+@media(max-width: 768px) {
+    div > section:nth-child(1) {
+        background-color: palevioletred;
+        color: white;
+        flex: 0 0 100px;
+        height: 50px;
+    }
+    div > section:nth-child(3) {
+        background-color: rosybrown;
+        color: white;
+        flex: 0 0 100px;
+        height: 50px;
+    }
+    footer {
+        background-color: coral;
+        height: 50px;
+    }
+    nav {
+        background-color: purple;
+        height: 50px;
+    }
+
+}
