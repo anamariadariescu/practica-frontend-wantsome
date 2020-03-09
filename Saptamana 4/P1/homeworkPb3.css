@@ -1,0 +1,61 @@
+body {
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+}
+
+section > div {
+    height: 250px;
+}
+
+.hungry {
+    width: auto;
+    height: 30px;
+    color: white;
+    background: gray;
+    opacity: 0.8;
+    margin-top: 220px;
+}
+
+p {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+section {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-rows: repeat(2, 100px);
+}
+
+section > div:first-child {
+    background-image: url(https://pizzazzerie.com/wp-content/uploads/2013/11/turkeybite02.jpg);
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+section > div:nth-child(2) {
+    background-image: url(https://www.chabaso.com/wp-content/uploads/2018/11/Group-8-1400x759.jpg);
+    grid-column-start: 5;
+    grid-column-end: 10;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+section > div:nth-child(3) {
+    background-image: url(https://www.happyfoodstube.com/wp-content/uploads/2018/07/mint-lemonade-picture.jpg);
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 5;
+    grid-row-end: 10;
+}
+
+section > div:last-child {
+    background-image: url(https://ptsmc.com/wp-content/uploads/2019/11/food.jpg);
+    grid-column-start: 5;
+    grid-column-end: 10;
+    grid-row-start: 5;
+    grid-row-end: 10;
+}
+
+
