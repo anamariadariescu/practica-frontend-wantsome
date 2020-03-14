@@ -47,3 +47,7 @@
     grid-row-end: 12;
     background: green;
 }
+
+#content > p {
+    margin: 0;
+}
