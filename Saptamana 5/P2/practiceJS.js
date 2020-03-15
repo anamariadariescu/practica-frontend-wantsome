@@ -39,6 +39,15 @@ var transformToArray = function(z) {
 var result = transformToArray("Robin Singh");
 console.log(result);
 
+// 4
+var transformString = function(a) {
+    var b = a.split(" ");
+    return b[0] + ' ' + b[1].charAt(0) + '.';
+}
+
+var result = transformString("Robin Singh");
+console.log(result);
+
 // 5
 var bigLetter = function(y) {
     return y.charAt(0).toUpperCase() + y.slice(1);
