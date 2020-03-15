@@ -1,0 +1,29 @@
+.blue {
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    margin: 0 auto;
+}
+
+.up {
+    text-align: center;
+}
+
+.up > img {
+    width: 150px;
+}
+
+.up > h1 {
+    color: white;
+    font-size: 40px;
+}
+
+.up > p {
+    color: white;
+    opacity: 0.7;
+}
+.first {
+    background: url(https://9to5google.com/wp-content/uploads/sites/4/2019/10/pixel_launcher_1.jpg?quality=82&strip=all&w=1600) no-repeat center center fixed;
+    height: 700px;
+    background-size: cover;
+}
