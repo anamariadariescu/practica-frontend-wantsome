@@ -66,4 +66,32 @@ var Uppercase = function(q) {
 var result = Uppercase('Js STRING EXERCISES');
 console.log(result);
 
+// 8
+var insertString = function(a, b, c) {
+    return a.substring(0, c) + b + a.substring(c);
+}
 
+var result = insertString('We are doing some exercises.','JavaScript ',18);
+console.log(result);
+
+// 9
+var cutString = function(a, b) {
+    return a.replace(b,'');
+}
+
+var result = cutString("The quick brown fox jumps over the lazy dog", ' the');
+console.log(result);
+
+// 10
+var equal = function(a, b) {
+    return a.toUpperCase() === b.toUpperCase();
+}
+ var result = equal('abcd', 'AbcD');
+ console.log(result);
+
+//  11
+var lowerCase = function(a) {
+    return a.toLowerCase();
+}
+var result = lowerCase('Js string exercises');
+console.log(result);
