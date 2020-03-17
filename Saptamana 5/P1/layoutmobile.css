@@ -16,14 +16,55 @@
 .up > h1 {
     color: white;
     font-size: 40px;
+    margin: 0;
 }
 
 .up > p {
     color: white;
     opacity: 0.7;
+    margin: 3px;
 }
 .first {
     background: url(https://9to5google.com/wp-content/uploads/sites/4/2019/10/pixel_launcher_1.jpg?quality=82&strip=all&w=1600) no-repeat center center fixed;
     height: 700px;
     background-size: cover;
+}
+
+.down {
+    float: right;
+    width: 700px;
+    font-size: 30px;
+    margin-right: 300px;
+}
+
+.down > button {
+    font-size: 35px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+.one, .two, .three {
+    width: 350px;
+    font-size: 30px;
+    text-align: center;
+    padding: 0 90px 0 90px;
+    
+}
+.sections {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    position: absolute;
+    margin-top: 10px;
+    width: 100%; 
+}
+
+.red {
+    background-color: brown;
+    height: 560px;
+}
+
+.paragraph {
+    margin-bottom: 30px;
+    s
 }
