@@ -87,6 +87,7 @@ body {
 
 .page2_one {
     background-color: #2B302E;
+    margin-top: -22px;
 }
 
 .page2_text1 {
@@ -94,14 +95,29 @@ body {
     width: 300px;
 }
 
-.textImg {
+.textImg, .textImg2 {
     display: flex;
     justify-content: center;
-    padding: 50px;
 } 
+
+.textImg2 {
+    background-color: #201D1D;
+    padding-top: 50px;
+}
+
+.page2_img1 > img {
+    width: 230px;
+}
 
 .page2_one > h1 {
     text-align: center;
     color: white;
     padding: 20px;
+}
+
+.pen > img {
+    width: 25px;
+    padding: 5px;
+    background-color: brown;
+    margin: 15px;
 }
