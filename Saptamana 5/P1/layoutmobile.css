@@ -95,7 +95,7 @@ body {
     width: 300px;
 }
 
-.textImg, .textImg2 {
+.textImg, .textImg2, .textImg3 {
     display: flex;
     justify-content: center;
 } 
@@ -120,4 +120,42 @@ body {
     padding: 5px;
     background-color: brown;
     margin: 15px;
+}
+
+.textImg3 {
+    padding-top: 50px;
+}
+
+.textImg4 {
+    background-color: brown;
+    margin-top: -22px;
+}
+
+.textImg4 > form > h1 {
+    color: white;
+    text-align: center;
+    padding-top: 40px;
+    
+}
+
+.textImg4 > form {
+    color: white;
+    margin: 0 auto;
+    width: 400px;
+    padding-bottom: 10px;
+}
+
+.textImg4 > form > input {
+    background-color: #B20000;
+    margin: 0;
+    border: 1px;
+}
+
+.tiny {
+    text-align: center;
+    color: brown;
+}
+
+.tiny > p {
+    margin: 0;
 }
