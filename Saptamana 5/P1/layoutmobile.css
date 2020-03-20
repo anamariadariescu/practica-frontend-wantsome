@@ -149,6 +149,7 @@ body {
     background-color: #B20000;
     margin: 0;
     border: 1px;
+    color: white;
 }
 
 .tiny {
@@ -158,4 +159,49 @@ body {
 
 .tiny > p {
     margin: 0;
+}
+
+/* TABLET VIEW */
+@media (min-width: 768px) and (max-width: 1024px)
+{
+    .layer {
+        height: 380px;
+        background-color: rgba(242, 38, 19, 0.7)
+    }
+
+    .down {
+        float: none;
+        width: 600px;
+        font-size: 20px;
+        margin: 0 auto;
+        text-align: center;
+        color: white;
+    }
+
+    .sections {
+        display: block;
+        margin-top: 0;
+        position: relative;
+    }
+
+    .paragraph {
+        top: 0;
+    }
+
+    .paragraph > p {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 420px;
+        margin: 0 auto;
+    }
+
+    .red {
+        height: auto;
+    }
+
+    .smallSections {
+        margin: 0 auto;
+        width: 400px;
+        padding-bottom: 10px;
+    }
 }
