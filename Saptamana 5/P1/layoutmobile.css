@@ -204,4 +204,22 @@ body {
         width: 400px;
         padding-bottom: 10px;
     }
+
+    .page2_one {
+        display: block;
+        text-align: center;
+    }
+
+    .page2_text1 {
+        width: 350px;
+        margin: 0 auto;
+    }
+
+    .textImg, .textImg3 {
+        display: block;
+    }
+
+    .textImg2 {
+        flex-direction: column-reverse;
+    }
 }
