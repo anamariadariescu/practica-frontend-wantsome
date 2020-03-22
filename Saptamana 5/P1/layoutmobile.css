@@ -1,6 +1,10 @@
+body {
+    margin: 0;
+}
+
 .blue {
-    height: 100px;
-    width: 100px;
+    height: 60px;
+    width: 60px;
     background-color: white;
     margin: 0 auto;
 }
@@ -10,12 +14,12 @@
 }
 
 .up > img {
-    width: 150px;
+    width: 100px;
 }
 
 .up > h1 {
     color: white;
-    font-size: 40px;
+    font-size: 20px;
     margin: 0;
 }
 
@@ -26,29 +30,34 @@
 }
 .first {
     background: url(https://9to5google.com/wp-content/uploads/sites/4/2019/10/pixel_launcher_1.jpg?quality=82&strip=all&w=1600) no-repeat center center fixed;
-    height: 700px;
+    height: 380px;
     background-size: cover;
 }
 
 .down {
     float: right;
-    width: 700px;
-    font-size: 30px;
-    margin-right: 300px;
+    width: 600px;
+    font-size: 20px;
 }
 
 .down > button {
-    font-size: 35px;
+    font-size: 15px;
     padding: 10px;
     background-color: black;
     color: white;
 }
-.one, .two, .three {
-    width: 350px;
-    font-size: 30px;
+.smallSections {
+    width: 200px;
+    font-size: 15px;
     text-align: center;
-    padding: 0 90px 0 90px;
+    padding: 0 80px 0 80px;
     
+}
+
+.smallSections > img {
+    width: 30px;
+    height: 30px;
+    padding: 20px;
 }
 .sections {
     display: flex;
@@ -61,10 +70,156 @@
 
 .red {
     background-color: brown;
-    height: 560px;
+    height: 341px;
 }
 
 .paragraph {
-    margin-bottom: 30px;
+    position: relative;
+    top: 280px;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+
+.paragraph > p {
+    margin: 0;
+}
+
+.page2_one {
+    background-color: #2B302E;
+    margin-top: -22px;
+}
+
+.page2_text1 {
+    color: white;
+    width: 300px;
+}
+
+.textImg, .textImg2, .textImg3 {
+    display: flex;
+    justify-content: center;
+} 
+
+.textImg2 {
+    background-color: #201D1D;
+    padding-top: 50px;
+}
+
+.page2_img1 > img {
+    width: 230px;
+}
+
+.page2_one > h1 {
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.pen > img {
+    width: 25px;
+    padding: 5px;
+    background-color: brown;
+    margin: 15px;
+}
+
+.textImg3 {
+    padding-top: 50px;
+}
+
+.textImg4 {
+    background-color: brown;
+    margin-top: -22px;
+}
+
+.textImg4 > form > h1 {
+    color: white;
+    text-align: center;
+    padding-top: 40px;
     
+}
+
+.textImg4 > form {
+    color: white;
+    margin: 0 auto;
+    width: 400px;
+    padding-bottom: 10px;
+}
+
+.textImg4 > form > input {
+    background-color: #B20000;
+    margin: 0;
+    border: 1px;
+    color: white;
+}
+
+.tiny {
+    text-align: center;
+    color: brown;
+}
+
+.tiny > p {
+    margin: 0;
+}
+
+/* TABLET VIEW */
+@media (min-width: 768px) and (max-width: 1024px)
+{
+    .layer {
+        height: 380px;
+        background-color: rgba(242, 38, 19, 0.7)
+    }
+
+    .down {
+        float: none;
+        width: 600px;
+        font-size: 20px;
+        margin: 0 auto;
+        text-align: center;
+        color: white;
+    }
+
+    .sections {
+        display: block;
+        margin-top: 0;
+        position: relative;
+    }
+
+    .paragraph {
+        top: 0;
+    }
+
+    .paragraph > p {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 420px;
+        margin: 0 auto;
+    }
+
+    .red {
+        height: auto;
+    }
+
+    .smallSections {
+        margin: 0 auto;
+        width: 400px;
+        padding-bottom: 10px;
+    }
+
+    .page2_one {
+        display: block;
+        text-align: center;
+    }
+
+    .page2_text1 {
+        width: 350px;
+        margin: 0 auto;
+    }
+
+    .textImg, .textImg3 {
+        display: block;
+    }
+
+    .textImg2 {
+        flex-direction: column-reverse;
+    }
 }
