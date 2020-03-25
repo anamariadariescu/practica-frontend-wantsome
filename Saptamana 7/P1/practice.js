@@ -16,3 +16,67 @@ var numbers = function (count) {
   }
   
   numbers2(4);
+
+  // 2
+  var flowers = ['roses', 'peonies', 'tulip']
+    
+  for (i=0; i < flowers.length; i++) {
+    console.log(flowers[i]);
+  }
+
+  var flowers = ['roses', 'peonies', 'tulip']
+
+  var i = 0;
+  while (i < flowers.length) {
+    console.log(flowers[i]);
+    i++
+  } 
+  flowers[i];
+
+  // 3
+  var userDetails = {name:'Ana', job:'frontendDev', age: 25};
+  for (var key in userDetails) {
+    console.log(userDetails[key]);
+  }
+
+  // 4.1
+var numbers = function (a) {
+  for ( i = 0; i <= a; i+=100 ) {
+    console.log(i);
+  }
+}
+numbers(1000);
+
+// 4.2
+var numbers = function (a) {
+  for ( i = 1; i <= a; i*=2 ) {
+    console.log(i);
+  }
+}
+numbers(128);
+ 
+// 4.3
+var numbers = function (a) {
+  for ( i = 0; i <= a; i+=2 ) {
+    console.log(i);
+  }
+}
+numbers(10);
+
+// 4.4
+var numbers = function (a) {
+  for ( i = 3; i <= a ; i+=3 ) {
+    console.log(i);
+  }
+}
+numbers(15);
+
+// 4.5
+var numbers = function (a) {
+  for ( i = a; i <= a; i--) {
+    if ( i >= 0 ){
+       console.log(i);
+    }
+  }
+}
+numbers(9);
