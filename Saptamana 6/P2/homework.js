@@ -90,17 +90,18 @@ var cars = function (mark) {
 
   var cars3 = function(mark) {
     var cars4 = {
-      'hyundai': 'Hyundai',
-      'mercedes': 'Mercedes',
-      'ford': 'Ford',
-      'jaguar': 'Jaguar',
-      'toyota': 'Toyota',
-      'renault': 'Renault',  
+      'hyundai': 'Coreea de Sud',
+      'mercedes': 'Germania',
+      'ford': 'SUA',
+      'jaguar': 'Regatul Unit',
+      'toyota': 'Japonia',
+      'renault': 'Franta',
+      'default': 'Marca este necunoscuta'
     };
-      return "Marca " + (cars4["hyundai"]) + " se produce in Coreea de Sud";
-      return "Marca " + (cars4["mercedes"]) + " se produce in Germania";
+      return "Marca " + mark + " se produce in " + (cars4[mark] || cars4['default']);
   }
     
     console.log(cars3("hyundai"));
     console.log(cars3("mercedes"));
     console.log(cars3("ford"));
+    console.log(cars3("suzuki"));
