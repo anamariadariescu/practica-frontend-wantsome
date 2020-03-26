@@ -80,3 +80,29 @@ var numbers = function (a) {
   }
 }
 numbers(9);
+
+// 4.6
+var result = "";
+for( i = 1; i <= 4; i++ ) {
+  result = result + " " + i + " " + i + " " + i;
+};
+console.log(result);
+
+// 4.7
+var result = "0 1 2 3 4";
+for( i = 0; i < 1; i++ ) {
+  result = result + " " + result + " " + result;
+};
+console.log(result);
+
+// 5
+var computeSumOfArrayElements = function(arr) {
+  var sum = 0;
+  var i = 0;
+  while( i < arr.length ) {
+    sum = sum + arr[i];
+    i++
+  }
+  console.log(sum);
+};
+computeSumOfArrayElements([1,2,3,4]);
