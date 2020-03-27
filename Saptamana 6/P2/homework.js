@@ -11,12 +11,12 @@ function gender(a) {
   console.log(gender('2100594274545'));
 
   // 2
-var scores = function (grades) {
-    if ( grades > 1 && grades <= 3 ) {
+  var scores = function (grades) {
+    if ( grades >= 1 && grades <= 3 ) {
       return "Calificatul corespunzator punctajului " + grades + " este " + "E";
-    } else if ( grades >= 3 && grades < 6 ) {
+    } else if ( grades >= 3 && grades <= 6 ) {
       return "Calificatul corespunzator punctajului " + grades + " este " + "D";
-    } else if ( grades > 7 && grades < 8) {
+    } else if ( grades >= 7 && grades <= 8) {
       return "Calificatul corespunzator punctajului " + grades + " este " + "B";
     } else if ( grades === 9 ) {
       return "Calificatul corespunzator punctajului " + grades + " este " + "A";
