@@ -102,3 +102,78 @@ var myFunction = function(email) {
       }
     }
     console.log(5);
+
+    // 9
+  var string = function(a, b) {
+    
+    var c = a.slice(-b.length);
+    if( c === b ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  console.log(string("Ana are mere", "mere"));
+
+    // 10 
+  var trueFunction = function(b) {
+    if(b == 5) {
+      console.log(b);
+    }
+  }
+  var a = [1, 2, 3, 4, 5, 6, 7, 8];
+  var myFunction = function(a, trueFunction) {
+  for( i=0; i<a.length; i++) {
+    trueFunction(a[i]);
+  }
+  }
+  myFunction(a, trueFunction);
+
+   // 11
+  var myString = function(a, b) {
+    var string = "";
+    for(i=0; i<=b.length; i++) {
+      if(a.indexOf(b[i]) >= 0) {
+        string = string + b[i];
+      }
+    }
+    if( string == b) {
+      console.log(true);
+    } else {
+      console.log(false);
+    }
+  
+  }
+  myString('Ana are mere', 'mere');
+
+   // 12
+  var myArray = function(a, b) {
+    for( i = 0; i <= a.length; i++ ) {
+      if( a[i] == b ) {
+          return a[i];
+      } else {
+        console.log(a[i]);
+      }
+    }
+
+  }
+  myArray([1, 2, 3, 4, 5], 3);
+
+    // 13
+  var myFunction = function(a) {
+
+    var myFilterArray = a.filter(Boolean);
+
+    console.log(myFilterArray);
+  }
+  myFunction([1, 2, NaN, undefined, null, "", 3, 4, 5,]);
+
+    // 14
+  var myFunction = function(word, number) {
+    var result = "";
+    for( i = 0; i <= number; i++) {
+      result = result + word;
+    }
+    console.log(result);
+  }
+  myFunction('Ana', 5);
