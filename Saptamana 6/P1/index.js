@@ -19,6 +19,7 @@ console.log(result);
 var numbers = 15;
 var result = Array.isArray(numbers);
 console.log(result);
+
 //Ex4: Folositi o metoda pe arrayuri avand in vedere variabila de mai jos, sa obtinem rezultatul "one and two and three and four and five" 
 // fara sa modificati variabila initiala
 var numbers = ['one', 'two', 'three', 'four', 'five'];

@@ -97,11 +97,12 @@ var myFunction = function(email) {
   function multiplication(a) {
 
     var result = 1
-      for( i = 0; i <= a; i++ ) {
+      for( i = 1; i <= a; i++ ) {
         result = result * i;
       }
+      console.log(result);
     }
-    console.log(5);
+    multiplication(5);
 
     // 9
   var string = function(a, b) {
