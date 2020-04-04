@@ -68,6 +68,20 @@ const removeDuplicates = (aString) => {
 // Gasiti cel mai lung string intr-o fraza
 //findLongestString('Wantsome is Awsomeeee today') - output 'Awsomeeee'
 
+const bigWord = (a) => {
+  let word = a.split(' ');
+  let maxWord = 0;
+  let finalWord = '';
+  for(i=0; i < word.length; i++) {
+    if( maxWord <= word[i].length) {
+      maxWord += word[i].length;
+      finalWord = word[i];
+    }
+  }
+  return finalWord;
+}
+console.log(bigWord('Wantsome is Awesomeeee today'));
+
 //Ex6
 //Scrieti o functie care sa aiba output-ul asta
 // *  
@@ -76,6 +90,29 @@ const removeDuplicates = (aString) => {
 // * * * *  
 // * * * * *  
 
+const star = () => {
+  for(i=1; i<=5; i++) {
+    switch(i) {
+      case 1:
+        console.log('*');
+        break;
+      case 2:
+        console.log('* *');
+        break;
+      case 3:
+        console.log('* * *');
+        break;
+      case 4:
+        console.log('* * * *');
+        break;
+      case 5:
+        console.log('* * * * *');
+        break;      
+    }
+  }
+};
+star(5);
+
 //ex7
 const negativeNumbers = [];
 
@@ -83,6 +120,17 @@ function extractNegativeNumbers(numbers) {
     // append any negative numbers found in the numbers array 
     // into the negativeNumbers array constant variable above
  
+}
+extractNegativeNumbers([1,2,-5,4,-6])
+
+const extractNegativeNumbers = (numbers) => {
+  const negativeNumbers = [];
+  for(i=0; i<=numbers.length; i++) {
+    if(numbers[i]<0) {
+      negativeNumbers.push(numbers[i]);
+    }
+  }
+  console.log(negativeNumbers);
 }
 extractNegativeNumbers([1,2,-5,4,-6])
 
