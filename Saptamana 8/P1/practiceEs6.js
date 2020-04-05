@@ -139,11 +139,45 @@ extractNegativeNumbers([1,2,-5,4,-6])
 //ex calculate(2, 5, "add") => 7
 //calculate(10, 8, "substract") => 2
 
+const calculate = (a, b, c) => {
+  if(c === 'add') {
+    return a+b ;
+  } else if(c === 'substract') {
+    return(a-b);
+  } else if(c === 'multiply') {
+    return(a*b);
+  } else {
+    return(a/b);
+  }
+}
+
+console.log(calculate(10, 5, 'add'));
+console.log(calculate(20, 10, 'substract'));
+console.log(calculate(25, 2, 'multiply'));
+console.log(calculate(48, 4, 'divide'));
+
 //Ex9
 // Vreau sa am o functie care sa verifice daca numarul dat este divizibl cu 3, 5 sau ambele si sa printeze "THREE", "FIVE", "BOTH" iar daca nu este cu niciunul sa returneze numarul
 // isDiv(15) => "BOTH"
 // isDiv(9)=> "THREE"
 // isDiv(7)=> 7
+
+const divide = (a) => {
+  if(a % 3 === 0 && a % 5 === 0) {
+    console.log('BOTH');
+  }
+  if(a % 3 === 0) {
+    console.log('THREE');
+  }
+  if(a % 5 === 0) {
+    console.log('FIVE');
+  } else {
+    console.log(a);
+  }
+}
+divide(30);
+divide(50);
+divide(15);
 
 
 //Master exercises
@@ -157,6 +191,22 @@ extractNegativeNumbers([1,2,-5,4,-6])
 // validPin("1234") => true
 // validPin("12345") => false
 // validPin("z23f") => false
+
+const validPin = (a) => {
+  if(a.length === 4 || a.length === 6) {
+    if (/^[0-9]+$/.test(a) === true) {
+      return true;
+    } else {
+      return false;
+    }
+  } else {
+    return false;
+  }
+}
+
+console.log(validPin('1234'));
+console.log(validPin('12345'));
+console.log(/^[0-9]+$/.test('z23f'));
 
 //ex11 
 //Folosind regex vreau sa scot toate vocalele dintr-un string
