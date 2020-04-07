@@ -74,7 +74,7 @@ const bigWord = (a) => {
   let finalWord = '';
   for(i=0; i < word.length; i++) {
     if( maxWord <= word[i].length) {
-      maxWord += word[i].length;
+      maxWord = word[i].length;
       finalWord = word[i];
     }
   }
