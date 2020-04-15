@@ -70,7 +70,7 @@ var myFunction = function(email) {
   ];
 
   function highNumber(arrayNumbers) {
-    for( i = 0; i <= arrayNumbers.length; i++) {
+    for( i = 0; i < arrayNumbers.length; i++) {
       var aux = 0;
       for( j = 0; j <= arrayNumbers[i].length; j++) {
         if( arrayNumbers[i][j] >= aux ) {
@@ -90,7 +90,7 @@ var myFunction = function(email) {
     var wordReverse = word.split('');
     console.log(wordReverse.reverse().join(''));
     };
-
+    
   myWords('bla');
 
   // 8
@@ -118,7 +118,7 @@ var myFunction = function(email) {
 
     // 10 
   var trueFunction = function(b) {
-    if(b == 5) {
+    if(b === 5) {
       console.log(b);
     }
   }
