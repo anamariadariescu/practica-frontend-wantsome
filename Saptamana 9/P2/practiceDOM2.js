@@ -36,3 +36,8 @@ head.appendChild(style);
 
 style.type = 'text/css';
 style.appendChild(document.createTextNode(css));
+
+
+const img = document.createElement('img');
+img.setAttribute('src', 'https://www.gardenia.net/storage/app/public/guides/detail/xqCYpJDRmSDWfAkeFsdxwcQXdNcjaYPr13j3S3WZ.jpeg');
+document.getElementsByTagName('body')[0].appendChild(img);
