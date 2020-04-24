@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form validation1</title>
+    <link rel="stylesheet" href="formValidation.css">
+</head>
+
+<body>
+
+    <div class="firstDiv">
+
+        <form>
+
+            <h1>Get your own Site 42 Sites account in seconds</h1>
+
+            <label for="user">USERNAME:</label> <br>
+            <div class="username">
+                <input type="text" name="user"> <br>
+                <p>(Must be at leat 4 characters, letters and numbers only.)</p>
+            </div>
+
+            <label for="email">EMAIL ADDRESS:</label> <br>
+            <div class="email">
+                <input type="text" name="email"> <br>
+                <p>Ew send your registration email to this address. (Double-check your email address before continuing.)
+                </p>
+            </div>
+
+            <label for="fname">FIRST NAME:</label> <br>
+            <div class="fname">
+                <input type="text" name="fname"> <br>
+                <p>(Must be input)</p>
+            </div>
+
+            <label for="lname">LAST NAME:</label> <br>
+            <div class="lname">
+                <input type="text" name="lname"> <br>
+                <p>(Must be input)</p>
+            </div>
+
+            <label for="nName">NICKNAME:</label> <br>
+            <input type="text" name="nName"> <br>
+
+            <label for="telephone">PHONE:</label> <br>
+            <div class="telephone">
+                <input type="text" name="telephone"> <br>
+                <p>Must be at least 10 characters, numbers only.</p>
+            </div>
+
+            <input type="radio" name="uWant">
+            <label for="site">GIMME A SITE!</label> <br>
+            <input type="radio" name="uWant">
+            <label for="username">JUST A USERNAME, PLEASE.</label> <br> <br>
+
+            <input type="button" value="Next" id="button">
+        </form>
+    </div>
+    <script src="formValidation.js"></script>
+</body>
+
+</html>

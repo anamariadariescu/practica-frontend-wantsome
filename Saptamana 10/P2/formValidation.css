@@ -1,0 +1,15 @@
+.firstDiv {
+    width: 370px;
+    padding-left: 40px;
+    margin-top: 20px;
+}
+
+#button {
+    background-color: black;
+    color: white;
+    width: 370px;
+}
+
+input[type=text] {
+    width: 100%;
+}
