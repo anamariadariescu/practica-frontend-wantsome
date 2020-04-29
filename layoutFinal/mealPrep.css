@@ -1,0 +1,51 @@
+.button1 {
+    background-color: #46B04A;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+}
+
+#biggestParent {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    margin: 50px;
+}
+    
+
+.parent {
+    width: 500px;
+    text-align: center;
+
+}
+
+.parent > ul {
+   list-style-type: none;
+}
+
+.category {
+    list-style: none;
+    padding: 0;
+}
+
+.category > li  {
+    display: inline;
+}
+
+.options {
+    display: flex;
+  }
+
+.options > div {
+    flex: 1; 
+  }
+
+.middleParent {
+    width: 100%;
+}
+
+body {
+    background-color: #CCDFCB;
+}
