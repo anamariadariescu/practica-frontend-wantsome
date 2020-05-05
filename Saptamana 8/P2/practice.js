@@ -1,8 +1,8 @@
 /*
 1. Implementati o functie care accepta ca parametru o valoare numerica si returneaza suma numerelor de la 1 pana la valoarea specificata
 */
-const sumOfNumbers = (a) => {
-    let result = 0;
+const sumOfNumbers = a => {
+    const result = 0;
     for(i=1; i<=a; i++) {
       result = result + i;
     }
@@ -13,10 +13,10 @@ const sumOfNumbers = (a) => {
 /*
 2. Implementati o functie care accepta ca parametru un string si returneaza cel mai lung cuvant din acel string.
 */
-const myString = (a) => {
-    let word = a.split(' ');
-    let maxWord = 0;
-    let result = '';
+const biggestWord = a => {
+    const word = a.split(' ');
+    const maxWord = 0;
+    const result = '';
     for(i=0; i<word.length; i++) {
       if( maxWord <= word[i].length ) {
           maxWord = word[i].length;
@@ -25,15 +25,15 @@ const myString = (a) => {
     }
     return(result);
   }
-  console.log(myString('Ana are mere'));
+  console.log(biggestWord('Ana are mere'));
 
 /*
 3. Implementati o functie care accepta ca parametru un string si ii face 'reverse'
 */
-const reverseString = (str) => {
-    let splitString = str.split('');
-    let reverseArray = splitString.reverse();
-    let joinArray = reverseArray.join('');
+const reverseString = str => {
+    const splitString = str.split('');
+    const reverseArray = splitString.reverse();
+    const joinArray = reverseArray.join('');
     return joinArray;
   }
   console.log(reverseString('wantsome'));
@@ -41,10 +41,18 @@ const reverseString = (str) => {
 /*
 4. Implementati o functie care accepta ca parametru un string si inlocuieste fiecare litera din acesta cu urmatoarea litera din alfabet
 */
-const nextLetter = (a) => {
-    var b = '';
+const nextLetter = a => {
+    const b = '';
     for(i=0; i<a.length; i++) {
-      b += String.fromCharCode(a.charCodeAt(i) + 1);
+      var verify = a.charCodeAt(i) + 1;
+
+      if (verify === 91) {
+        b += 'A';
+      } else if (verify === 123) {
+        b += 'a';
+      } else {
+        b += String.fromCharCode(verify);
+      }
     }
     console.log(b);
   }
@@ -58,9 +66,9 @@ Exemplu: input: 64  ->  output: 1:4
 /*
 6. Implementati o functie care accepta ca parametru un string si returneaza string-ul cu toate literele ordonate alfabetic
 */
-const sortString = (str) => {
-  let arr = str.split('');
-  let sorted = arr.sort();
+const sortString = str => {
+  const arr = str.split('');
+  const sorted = arr.sort();
   return sorted.join('');
 }
 console.log(sortString('abracadabra'));
@@ -70,7 +78,7 @@ console.log(sortString('abracadabra'));
 Exemplu: input: "+a+b+c+"   ->   output: true
 Exemply: input: "+ab+c+d+"  ->   output: false
 */
-const verifyCharacter = (str) => {
+const verifyCharacter = str => {
   const arr = str.split('+');
   for(i=0; i<arr.length; i++) {
     if(arr[i].length>1) {

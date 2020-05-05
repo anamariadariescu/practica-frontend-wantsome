@@ -39,12 +39,12 @@ const numbers = (a, b) => {
 //checkString('isEasy') - JSisEasy
 //checkString(null) - JS
 
-const myFunction = (a) => {
+const myFunction = a => {
   
     if(a.indexOf('JS') === 0) {
       return a;
     } else {
-      return 'JS' + a;
+      return 'JS ${a}';
     }
   }
   console.log(myFunction('JSisAwesome'));
@@ -68,7 +68,7 @@ const removeDuplicates = (aString) => {
 // Gasiti cel mai lung string intr-o fraza
 //findLongestString('Wantsome is Awsomeeee today') - output 'Awsomeeee'
 
-const bigWord = (a) => {
+const bigWord = a => {
   let word = a.split(' ');
   let maxWord = 0;
   let finalWord = '';
@@ -162,7 +162,7 @@ console.log(calculate(48, 4, 'divide'));
 // isDiv(9)=> "THREE"
 // isDiv(7)=> 7
 
-const divide = (a) => {
+const divide = a => {
   if(a % 3 === 0 && a % 5 === 0) {
     console.log('BOTH');
   }
@@ -192,7 +192,7 @@ divide(15);
 // validPin("12345") => false
 // validPin("z23f") => false
 
-const validPin = (a) => {
+const validPin = a => {
   if(a.length === 4 || a.length === 6) {
     if (/^[0-9]+$/.test(a) === true) {
       return true;

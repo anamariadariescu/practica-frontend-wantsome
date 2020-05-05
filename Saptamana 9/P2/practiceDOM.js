@@ -6,8 +6,8 @@
 // La fiecare selectie vom schimba background color-ul cu o culoare diferita pentru fiecare metoda
 
 
-const testId = documemt.getElementByYd('test');
-testId.style.backgroungcolor = 'green';
+const testId = document.getElementById('test');
+testId.style.backgroundcolor = 'green';
 console.log(testId);
 
 const testClasses = document.getElementsByClassName('test');

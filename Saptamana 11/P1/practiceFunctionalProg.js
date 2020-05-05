@@ -115,7 +115,7 @@ const distances = [
   { from: 'Kolkata', to: 'Sylhet', distance: 670 }
 ];
 
-const road = (arr) => {
+const road = arr => {
   miles = arr.map(arr => arr.distance * 0.621371);
   return miles;
 }
@@ -280,3 +280,27 @@ console.log(secondMov)
 
 const list = firstMov.concat(secondMov);
 console.log(list.split())
+
+// 6
+//ex.1.
+// Scrieti o functie care sa mute literele cu o litera mai incolo folosind .map
+// de exemplu moveLetters('hello') // => 'ifmmp'
+// moveLetters('abcxy') // => "bcdyz"
+//hint : String.fromCharCode() String.charCodeAt()
+
+const bla = a => {
+  let splitWord = a.split('');
+  console.log(splitWord);
+  
+  let moveLetter = splitWord.map(el => {
+    return String.fromCharCode(el.charCodeAt(0) + 1);
+  })
+  
+  console.log(moveLetter);
+  
+  let trasnformIntoString = moveLetter.join('');
+  
+  console.log(trasnformIntoString);
+  }
+
+console.log(bla('hello'));
