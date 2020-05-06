@@ -70,7 +70,7 @@ function getPersonsDomElements(arr) {
     document.querySelector('body').appendChild(age);
   })
 }
-console.log(getPersonsDomElements([
+getPersonsDomElements([
   {
     name: 'Angelina',
     surname: 'Jolie',
@@ -81,7 +81,7 @@ console.log(getPersonsDomElements([
     surname: 'Jones',
     age: 27
   },
-]));
+]);
 
 /* Ex.1
 Loop through the Array and remove all non-active users from the initial Array */
@@ -288,19 +288,138 @@ console.log(list.split())
 // moveLetters('abcxy') // => "bcdyz"
 //hint : String.fromCharCode() String.charCodeAt()
 
-const bla = a => {
+const word = a => {
   let splitWord = a.split('');
   console.log(splitWord);
-  
+
   let moveLetter = splitWord.map(el => {
     return String.fromCharCode(el.charCodeAt(0) + 1);
   })
-  
-  console.log(moveLetter);
-  
-  let trasnformIntoString = moveLetter.join('');
-  
-  console.log(trasnformIntoString);
-  }
 
-console.log(bla('hello'));
+  console.log(moveLetter);
+
+  let trasnformIntoString = moveLetter.join('');
+
+  console.log(trasnformIntoString);
+}
+
+word('hello');
+
+// ex2
+// Vreau sa am o functie care sa faca uppercase la cuvinte in functie ca in exemplu de mai jos
+// changeWordCase('hey ppl, lets learn javascript together') // => "HEY ppl, LETS learn JAVASCRIPT together SOMETIME"
+
+const word2 = a => {
+  let splitWord = a.split(' ');
+
+  let uppercaseWord = splitWord.map((el, index) => {
+    if (index % 2 === 0) {
+      return el.toUpperCase();
+    } else {
+      return el
+    }
+  })
+
+  let transformIntoString = uppercaseWord.join(' ');
+
+  console.log(transformIntoString);
+}
+
+word2('hey ppl, lets learn javascript together');
+
+// ex3
+// Faceti asftel incat toate variabilele de mai jois sa returneze ceea ce zice numele
+const arr = [
+  { name: 'sasha', sex: 'f', age: 7, species: 'cat' },
+  { name: 'john', sex: 'm', age: 133, species: 'human' },
+  { name: 'titus', sex: 'm', age: 62, species: 'human' },
+  { name: 'kalifa', sex: 'f', age: 255, species: 'human' },
+  { name: 'oreo', sex: 'm', age: 21, species: 'cat' },
+];
+
+let allCats = arr.filter(cats => cats.species === 'cat');
+console.log(allCats);
+
+let allHumans = arr.filter(humans => humans.species === 'human');
+console.log(allHumans);
+
+let allFemales = arr.filter(gender => gender.sex === 'f');
+console.log(allFemales);
+
+let totalOfAllAges = arr.reduce((acc, years) => {
+  return acc + years.age;
+}, 0);
+console.log(totalOfAllAges);
+
+let cats = arr.filter(cats => cats.species === 'cat');
+let averageAgeOfCats = cats.reduce((acc, years) => {
+  return acc + years.age;
+}, 0) / cats.length;
+console.log(averageAgeOfCats);
+
+let humans = arr.filter(humans => humans.species === 'human');
+let averageAgeOfHumans = humans.reduce((acc, years) => {
+  return acc + years.age
+}, 0) / humans.length;
+console.log(averageAgeOfHumans);
+
+let avgLengthOfNames = arr.reduce((acc, names) => {
+  return acc + names.name.length;
+}, 0) / arr.length;
+console.log(avgLengthOfNames);
+
+//ex 1.
+// Faceti o functie numita composedValue care ia ca argumente 2 functii si returneaza valoarea lor - // f1(f2(value))
+//ex composedValue(square, double, 5);  // 100
+// functia square returneaza patratul numarului iar double - dublul numarului
+
+const firstFunc = a => {
+  return a * 2;
+}
+
+const secondFunc = a => {
+  return a * a;
+}
+
+const lastFunc = (f1, f2, value) => {
+  return f1(f2(value));
+}
+console.log(lastFunc(secondFunc, firstFunc, 5));  
+
+//ex.2
+//faceti o functie 'compose' care atunci cand va fi apleata returneaza rezultatul altor 2 functii;
+//exemplu const myFunction = compose(square, double) 
+// myFunction(5)  --> 100
+// myFunction(10) --> 400  ...etc
+
+const double = a => {
+  return a * 2;
+};
+
+const square = a => {
+  return a * a;
+}
+
+const myFunction = (value) => {
+  return square(double(value));
+}
+console.log(myFunction(5));
+console.log(myFunction(10));
+
+//ex.3
+//faceti o functie find care ia ca parametrii un array si o functie care testeaza arrayul si returneaza doar elmentele care trec testele.
+// find([1,2,3,4,5], isOdd); returneaza 1 3 5
+
+const isOdd = nr => {  
+  if(nr % 2 !== 0) {
+    console.log(nr);
+  }
+}
+
+const find = (array, f1) => {
+for (i = 0; i < array.length; i++) {
+  isOdd(array[i]);
+}
+}
+
+find([1, 2, 3, 4, 5], isOdd);      
