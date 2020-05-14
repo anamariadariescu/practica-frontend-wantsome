@@ -14,7 +14,6 @@ request.onload = function () {
 
 function allColors(jsonObj) {
     var body = document.querySelector('body');
-    console.log(body)
     for(const property in jsonObj) {
         console.log(property)
         console.log(jsonObj[property])
