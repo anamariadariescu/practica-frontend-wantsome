@@ -1,0 +1,31 @@
+nav {
+    text-align: center;
+}
+
+#mainMenu > li {
+    display: inline;
+    padding: 10px;
+}
+
+#mainMenu {
+    font-size: 20px;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+#leftSide, #rightSide {
+    padding-left: 50px;
+    padding-top: 30px;
+    width: 150px;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.child {
+    display: flex;
+    /* display: inline-block;
+} */
+
