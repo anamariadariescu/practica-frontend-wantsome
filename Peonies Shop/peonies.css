@@ -50,3 +50,11 @@ body {
 .product > img {
     width: 100%;
 }
+
+/* Spring, Summer, Autumn, Winter */
+
+.product-description {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
