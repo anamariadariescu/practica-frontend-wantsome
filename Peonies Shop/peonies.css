@@ -30,7 +30,7 @@ body {
 
 .season {
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
 }
 
 .productParent > .season {
@@ -87,4 +87,11 @@ img {
 
 .product-description-text {
     padding-top: 30px;
+}
+
+.product {
+    width: 300px;
+    text-align: center;
+    padding-left: 70px;
+}
 }
