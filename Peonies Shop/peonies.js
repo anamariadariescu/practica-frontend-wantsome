@@ -112,3 +112,34 @@ for (i = 0; i < whichSeason.length; i++) {
         }
     }
 }
+
+// document.getElementsByClassName(".add-to-wishlist").addEventListener("onclick", function(){
+//     alert ("Hello World!")
+//   });
+
+  var myWishlist = document.getElementsByClassName("add-to-wishlist");
+  var wishlistParent = document.getElementById('wishlist')
+  console.log(wishlist)
+
+  for (i = 0; i < myWishlist.length; i++) {
+      myWishlist[i].onclick = function() {
+
+        var img = classWishlistImg
+        //   alert('aici')
+        var classWishlistProduct = document.createElement('div');
+        classWishlistProduct.className = 'wishlist-product';
+        wishlistParent.appendChild(classWishlistProduct);
+
+        var classWishlistImg = document.createElement('div');
+        classWishlistImg.className = 'wishlist-img';
+        classWishlistProduct.appendChild(classWishlistImg);
+
+        var classWishlistDescription = document.createElement('div');
+        classWishlistDescription.className = 'wishlist-description';
+        classWishlistProduct.appendChild(classWishlistDescription);
+
+        console.log(this.parentNode.parentNode)
+
+        // var prepareProductWishlist = document.getElementsByClassName('add-to-wishlist').parentNode
+      }
+  }

@@ -16,16 +16,17 @@ body {
     color: white;
 }
 
-#leftSide, #rightSide {
+#leftSide {
     padding-left: 50px;
     padding-top: 30px;
-    width: 150px;
+    width: 350px;
     font-style: italic;
     font-size: 20px;
 }
 
 #rightSide {
     width: 100%;
+    padding-top: 30px;
 }
 
 .season {
@@ -34,7 +35,7 @@ body {
 }
 
 .productParent > .season {
-    padding: 30px;
+    padding-top: 30px;
 }
 
 #parent {
@@ -92,7 +93,7 @@ img {
 .product {
     width: 300px;
     text-align: center;
-    padding-left: 70px;
+    padding-left: 50px;
 }
 
 .topnav {
@@ -121,3 +122,15 @@ img {
     color: white;
   }
   
+  .wishlist-product {
+      display: flex;
+  }
+  
+  .small-img {
+      width: 120px;
+  }
+
+  .wishlist-description {
+      font-size: 17px;
+      padding-left: 13px;
+  }
