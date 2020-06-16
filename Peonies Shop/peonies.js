@@ -124,8 +124,7 @@ for (i = 0; i < whichSeason.length; i++) {
   for (i = 0; i < myWishlist.length; i++) {
       myWishlist[i].onclick = function() {
 
-        var img = classWishlistImg
-        //   alert('aici')
+        //create scheleton for wishlist
         var classWishlistProduct = document.createElement('div');
         classWishlistProduct.className = 'wishlist-product';
         wishlistParent.appendChild(classWishlistProduct);
@@ -138,8 +137,33 @@ for (i = 0; i < whichSeason.length; i++) {
         classWishlistDescription.className = 'wishlist-description';
         classWishlistProduct.appendChild(classWishlistDescription);
 
-        console.log(this.parentNode.parentNode)
+        // clone wishlist products
+        var product = this.parentNode.parentNode
+        var img = product.getElementsByClassName('product-img')[0].getElementsByTagName('img')[0].getAttribute('src');
 
-        // var prepareProductWishlist = document.getElementsByClassName('add-to-wishlist').parentNode
+        var paragraph1 = product.getElementsByClassName('product-description')[0].getElementsByTagName('h3')[0].innerHTML;
+        console.log(paragraph1)
+
+        var paragraph2 = product.getElementsByClassName('product-description')[0].getElementsByTagName('p')[0].innerHTML;
+        console.log(paragraph2);
+
+
+        //clone image
+        var sourceImage = document.createElement('img');
+        sourceImage.classList.add('small-img');
+        sourceImage.src = img;
+        classWishlistImg.appendChild(sourceImage);
+
+        var sourceParagraph1 = document.createElement('p');
+        sourceParagraph1.textContent = paragraph1;
+        
+        classWishlistDescription.appendChild(sourceParagraph1);
+        // classWishlistDescription.appendChild.paragraph1;
+
+        var sourceParagraph2 = document.createElement('p');
+        sourceParagraph2.textContent = paragraph2;
+        classWishlistDescription.appendChild(sourceParagraph2);
+        // classWishlistDescription.appendChild.paragraph2;
+
       }
   }
