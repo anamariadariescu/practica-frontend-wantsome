@@ -133,7 +133,7 @@ console.log(whichSeason)
 
 var myWishlist = document.getElementsByClassName("add-to-wishlist");
 var wishlistParent = document.getElementById('wishlist')
-console.log(wishlist)
+// console.log(wishlist)
 
 for (i = 0; i < myWishlist.length; i++) {
     myWishlist[i].onclick = function () {
@@ -197,19 +197,31 @@ for (i = 0; i < myCart.length; i++ ) {
 
         var classCartImg = document.createElement('div');
         classCartImg.className = "cart-img";
-        cartParent.appendChild(classCartImg);
+        classCartProduct.appendChild(classCartImg);
 
         var classCartDescription = document.createElement('div');
         classCartDescription.className = "cart-description";
-        cartParent.appendChild(classCartDescription);
+        classCartProduct.appendChild(classCartDescription);
 
         var classCartQuantity = document.createElement('div');
-        classCartQuantity.className = "cart-quantity";-
-        cartParent.appendChild(classCartQuantity);
+        classCartQuantity.className = "cart-quantity";
+        classCartProduct.appendChild(classCartQuantity);
+
+        var classCartQuantityInput = document.createElement('input');
+        classCartQuantityInput.className = "cart-quantity-input";
+        classCartQuantityInput.type = "number";
+        classCartQuantityInput.value = 1;
+        classCartQuantity.appendChild(classCartQuantityInput);
+
+        var btn = document.createElement('button');
+        btn.className = "btn";
+        btn.value = "REMOVE";
+        classCartQuantity.appendChild(btn);
 
         // clone wishlist products
         var product = this.parentNode.parentNode
         var img = product.getElementsByClassName('product-img')[0].getElementsByTagName('img')[0].getAttribute('src');
+        // console.log(img);
 
         var paragraph1 = product.getElementsByClassName('product-description')[0].getElementsByTagName('h3')[0].innerHTML;
         console.log(paragraph1)
@@ -231,7 +243,7 @@ for (i = 0; i < myCart.length; i++ ) {
 
         var sourceParagraph2 = document.createElement('p');
         sourceParagraph2.textContent = paragraph2;
-        classCart-Description.appendChild(sourceParagraph2);
+        classCartDescription.appendChild(sourceParagraph2);
         // classWishlistDescription.appendChild.paragraph2;
 
         
