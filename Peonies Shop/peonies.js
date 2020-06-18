@@ -1,11 +1,10 @@
 
-var valueOfBouquet = document.getElementsByName('price');
+var valueOfBouquet = document.getElementsByName('filter');
 
-for (i = 0; i < valueOfBouquet.length; i++) 
-{
+for (i = 0; i < valueOfBouquet.length; i++) {
     console.log(productParentNode);
     valueOfBouquet[i].onclick = function () {
-    console.log(productParentNode);
+        console.log(productParentNode);
 
         productParentNode.innerHTML = '';
 
@@ -15,7 +14,7 @@ for (i = 0; i < valueOfBouquet.length; i++)
         productParentNode.appendChild(classSeason);
 
 
-        // alert(this.value);
+        console.log(this.value);
 
         switch (this.value) {
             case '50 - 99':
@@ -55,6 +54,21 @@ for (i = 0; i < valueOfBouquet.length; i++)
                     }
                 }
                 break;
+            case 'Spring':
+                productParentNode.appendChild(springSeason)
+                break;
+
+            case 'Summer':
+                productParentNode.appendChild(summerSeason)
+                break;
+
+            case 'Autumn':
+                productParentNode.appendChild(autumnSeason)
+                break;
+
+            case 'Winter':
+                productParentNode.appendChild(winterSeason)
+                break;
         }
     }
 }
@@ -88,41 +102,41 @@ console.log(winterSeason);
 var whichSeason = document.getElementsByName('season');
 console.log(whichSeason)
 
-for (i = 0; i < whichSeason.length; i++) {
-    console.log(whichSeason[i]);
-    whichSeason[i].onclick = function () {
-        productParentNode.innerHTML = '';
-        // console.log(this.value);
-        switch(this.value) {
-            case 'Spring':
-                productParentNode.appendChild(springSeason)
-                break;
+// for (i = 0; i < whichSeason.length; i++) {
+//     console.log(whichSeason[i]);
+//     whichSeason[i].onclick = function () {
+//         productParentNode.innerHTML = '';
+//         // console.log(this.value);
+//         switch (this.value) {
+//             case 'Spring':
+//                 productParentNode.appendChild(springSeason)
+//                 break;
 
-            case 'Summer':
-                productParentNode.appendChild(summerSeason)
-                break;
-                
-            case 'Autumn':
-                productParentNode.appendChild(autumnSeason)
-                break;
-                
-            case 'Winter':
-                productParentNode.appendChild(winterSeason)
-                break;    
-        }
-    }
-}
+//             case 'Summer':
+//                 productParentNode.appendChild(summerSeason)
+//                 break;
+
+//             case 'Autumn':
+//                 productParentNode.appendChild(autumnSeason)
+//                 break;
+
+//             case 'Winter':
+//                 productParentNode.appendChild(winterSeason)
+//                 break;
+//         }
+//     }
+// }
 
 // document.getElementsByClassName(".add-to-wishlist").addEventListener("onclick", function(){
 //     alert ("Hello World!")
 //   });
 
-  var myWishlist = document.getElementsByClassName("add-to-wishlist");
-  var wishlistParent = document.getElementById('wishlist')
-  console.log(wishlist)
+var myWishlist = document.getElementsByClassName("add-to-wishlist");
+var wishlistParent = document.getElementById('wishlist')
+console.log(wishlist)
 
-  for (i = 0; i < myWishlist.length; i++) {
-      myWishlist[i].onclick = function() {
+for (i = 0; i < myWishlist.length; i++) {
+    myWishlist[i].onclick = function () {
 
         //create scheleton for wishlist
         var classWishlistProduct = document.createElement('div');
@@ -142,10 +156,10 @@ for (i = 0; i < whichSeason.length; i++) {
         var img = product.getElementsByClassName('product-img')[0].getElementsByTagName('img')[0].getAttribute('src');
 
         var paragraph1 = product.getElementsByClassName('product-description')[0].getElementsByTagName('h3')[0].innerHTML;
-        console.log(paragraph1)
+        // console.log(paragraph1);
 
         var paragraph2 = product.getElementsByClassName('product-description')[0].getElementsByTagName('p')[0].innerHTML;
-        console.log(paragraph2);
+        // console.log(paragraph2);
 
 
         //clone image
@@ -156,7 +170,7 @@ for (i = 0; i < whichSeason.length; i++) {
 
         var sourceParagraph1 = document.createElement('p');
         sourceParagraph1.textContent = paragraph1;
-        
+
         classWishlistDescription.appendChild(sourceParagraph1);
         // classWishlistDescription.appendChild.paragraph1;
 
@@ -165,5 +179,61 @@ for (i = 0; i < whichSeason.length; i++) {
         classWishlistDescription.appendChild(sourceParagraph2);
         // classWishlistDescription.appendChild.paragraph2;
 
-      }
-  }
+    }
+}
+
+var myCart = document.getElementsByClassName("add-to-cart");
+// console.log(myCart);
+var cartParent = document.getElementById("cart");
+
+for (i = 0; i < myCart.length; i++ ) {
+    myCart[i].onclick = function() {
+
+        //create scheleton for cart
+        var classCartProduct = document.createElement('div');
+        // console.log(classCartProduct)
+        classCartProduct.className = "cart-product";
+        cartParent.appendChild(classCartProduct);
+
+        var classCartImg = document.createElement('div');
+        classCartImg.className = "cart-img";
+        cartParent.appendChild(classCartImg);
+
+        var classCartDescription = document.createElement('div');
+        classCartDescription.className = "cart-description";
+        cartParent.appendChild(classCartDescription);
+
+        var classCartQuantity = document.createElement('div');
+        classCartQuantity.className = "cart-quantity";-
+        cartParent.appendChild(classCartQuantity);
+
+        // clone wishlist products
+        var product = this.parentNode.parentNode
+        var img = product.getElementsByClassName('product-img')[0].getElementsByTagName('img')[0].getAttribute('src');
+
+        var paragraph1 = product.getElementsByClassName('product-description')[0].getElementsByTagName('h3')[0].innerHTML;
+        console.log(paragraph1)
+
+        var paragraph2 = product.getElementsByClassName('product-description')[0].getElementsByTagName('p')[0].innerHTML;
+        // console.log(paragraph2)
+
+        //clone image
+        var sourceImage = document.createElement('img');
+        sourceImage.classList.add('little-img');
+        sourceImage.src = img;
+        classCartImg.appendChild(sourceImage);
+
+        var sourceParagraph1 = document.createElement('p');
+        sourceParagraph1.textContent = paragraph1;
+
+        classCartDescription.appendChild(sourceParagraph1);
+        // classWishlistDescription.appendChild.paragraph1;
+
+        var sourceParagraph2 = document.createElement('p');
+        sourceParagraph2.textContent = paragraph2;
+        classCart-Description.appendChild(sourceParagraph2);
+        // classWishlistDescription.appendChild.paragraph2;
+
+        
+    }
+}
