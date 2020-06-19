@@ -27,12 +27,13 @@
     </nav>
 
     <div id="cart">
-        <p><strong>Add to cart:</strong></p>
+        <p id="titleCart"><strong>Add to cart:</strong></p>
                 <ul id="item-price-quantity">
                     <li>Item</li>
                     <li id="cartPrice">Price</li>
-                    <li id>Quantity</li>
+                    <li id="cartQuantity">Quantity</li>
                 </ul>
+                <div class="cart-items">
                 <div class="cart-product"> 
                     <div class="cart-img">
                         <a href="./flowers-pages/spring/peonies.html"></a> 
@@ -40,7 +41,7 @@
                     </div>
                     <div class="cart-description">
                         <p>BUCHET – PEONY OF MAY</p>
-                        <p>300.00 lei</p>
+                        <p class="cart-price">300.00 lei</p>
                     </div>
                     <div class="cart-quantity">
                         <input class="cart-quantity-input" type="number" value="1">
@@ -54,7 +55,7 @@
                     </div>
                     <div class="cart-description">
                         <p>BUCHET – ANEMONE’S LOVE</p>
-                        <p>400.00 lei</p>
+                        <p class="cart-price">400.00 lei</p>
                     </div>
                     <div class="cart-quantity">
                         <input class="cart-quantity-input" type="number" value="1">
@@ -68,12 +69,17 @@
                     </div>
                     <div class="cart-description">
                         <p>BUCHET – PURPLE AND RED SMILES</p>
-                        <p>320.00 lei</p>
+                        <p class="cart-price">320.00 lei</p>
                     </div>
                     <div class="cart-quantity">
                         <input class="cart-quantity-input" type="number" value="1">
                         <button class="btn">REMOVE</button>
                     </div> 
+                </div>
+                <div class="cart-total">
+                    <p><strong class="cart-total-title">Total:</strong></p>
+                    <p class="cart-total-price">1020.00 lei</p>
+                </div>
                 </div>
     </div>
 

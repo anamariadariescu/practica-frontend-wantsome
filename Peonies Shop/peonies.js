@@ -2,9 +2,9 @@
 var valueOfBouquet = document.getElementsByName('filter');
 
 for (i = 0; i < valueOfBouquet.length; i++) {
-    console.log(productParentNode);
+    // console.log(productParentNode);
     valueOfBouquet[i].onclick = function () {
-        console.log(productParentNode);
+        // console.log(productParentNode);
 
         productParentNode.innerHTML = '';
 
@@ -14,7 +14,7 @@ for (i = 0; i < valueOfBouquet.length; i++) {
         productParentNode.appendChild(classSeason);
 
 
-        console.log(this.value);
+        // console.log(this.value);
 
         switch (this.value) {
             case '50 - 99':
@@ -85,22 +85,22 @@ for (i = 0; i < myProductsPrice.length; i++) {
 
 
 var seasonParent = document.querySelectorAll('.season');
-console.log(seasonParent);
+// console.log(seasonParent);
 
 var springSeason = document.querySelectorAll('.season')[0];
-console.log(springSeason);
+// console.log(springSeason);
 
 var summerSeason = document.querySelectorAll('.season')[1];
-console.log(summerSeason);
+// console.log(summerSeason);
 
 var autumnSeason = document.querySelectorAll('.season')[2];
-console.log(autumnSeason);
+// console.log(autumnSeason);
 
 var winterSeason = document.querySelectorAll('.season')[3];
-console.log(winterSeason);
+// console.log(winterSeason);
 
 var whichSeason = document.getElementsByName('season');
-console.log(whichSeason)
+// console.log(whichSeason)
 
 // for (i = 0; i < whichSeason.length; i++) {
 //     console.log(whichSeason[i]);
@@ -215,7 +215,7 @@ for (i = 0; i < myCart.length; i++ ) {
 
         var btn = document.createElement('button');
         btn.className = "btn";
-        btn.value = "REMOVE";
+        btn.textContent = "REMOVE";
         classCartQuantity.appendChild(btn);
 
         // clone wishlist products
@@ -224,7 +224,7 @@ for (i = 0; i < myCart.length; i++ ) {
         // console.log(img);
 
         var paragraph1 = product.getElementsByClassName('product-description')[0].getElementsByTagName('h3')[0].innerHTML;
-        console.log(paragraph1)
+        // console.log(paragraph1)
 
         var paragraph2 = product.getElementsByClassName('product-description')[0].getElementsByTagName('p')[0].innerHTML;
         // console.log(paragraph2)
@@ -244,8 +244,35 @@ for (i = 0; i < myCart.length; i++ ) {
         var sourceParagraph2 = document.createElement('p');
         sourceParagraph2.textContent = paragraph2;
         classCartDescription.appendChild(sourceParagraph2);
-        // classWishlistDescription.appendChild.paragraph2;
+        // classWishlistDescription.appendChild.paragraph2;   
+    }
+}
 
-        
+var removeCartItemButtons = document.getElementsByClassName('btn');
+// console.log(removeCartItemButtons);
+
+for (i = 0; i < removeCartItemButtons.length; i++) {
+    var buttons = removeCartItemButtons[i];
+    buttons.addEventListener('click', function(event) {
+        // console.log("clicked");
+        var buttonClicked = event.target;
+        buttonClicked.parentElement.parentElement.remove();
+        updateCartTotal()
+    })
+}
+
+function updateCartTotal() {
+    var cartItemContainer = document.getElementsByClassName('cart-items')[0];
+    var cartProducts = cartItemContainer.getElementsByClassName('cart-product');
+    for (i = 0; i < cartProducts.length; i++) {
+        var cartProduct = cartProducts[i];
+        var priceBouquet = cartProduct.getElementsByClassName('cart-price')[0];
+        var quantityBouquet = cartProduct.getElementsByClassName('cart-quantity-input')[0];
+        // console.log(priceBouquet, quantityBouquet)
+        var priceElement = parseFloat(priceBouquet.innerText.replace('lei', ''));
+        // console.log(priceElement);
+        var quantityElement = quantityBouquet.value
+        console.log(priceElement * quantityElement)
+
     }
 }
