@@ -9,12 +9,12 @@
 <body>
 
     <nav>
-        <div class="topnav">
+        <!-- <div class="topnav">
             <a href="#home">Home</a>
             <a href="#news">News</a>
             <a href="#contact">Contact</a>
             <a href="#about">About</a>
-          </div>
+        </div> -->
         <div>
             <h2>PEONIES</h2>
         </div>
@@ -26,63 +26,67 @@
         </ul>
     </nav>
 
-    <div id="cart">
+    <div id="cart" style="display: none">
         <p id="titleCart"><strong>Add to cart:</strong></p>
-                <ul id="item-price-quantity">
-                    <li>Item</li>
-                    <li id="cartPrice">Price</li>
-                    <li id="cartQuantity">Quantity</li>
-                </ul>
-                <div class="cart-items">
-                <div class="cart-product"> 
-                    <div class="cart-img">
-                        <a href="./flowers-pages/spring/peonies.html"></a> 
-                        <img class="little-img" src="./flowers/primavara 1.png" />
-                    </div>
-                    <div class="cart-description">
-                        <p>BUCHET – PEONY OF MAY</p>
-                        <p class="cart-price">300.00 lei</p>
-                    </div>
-                    <div class="cart-quantity">
-                        <input class="cart-quantity-input" type="number" value="1">
-                        <button class="btn">REMOVE</button>
-                    </div> 
+        <ul id="item-price-quantity">
+            <li>Item</li>
+            <li id="cartPrice">Price</li>
+            <li id="cartQuantity">Quantity</li>
+        </ul>
+        <!-- <div class="cart-items">
+            <div class="cart-product">
+                <div class="cart-img">
+                    <a href="./flowers-pages/spring/peonies.html"></a>
+                    <img class="little-img" src="./flowers/primavara 1.png" />
                 </div>
-                <div class="cart-product">
-                    <div class="cart-img"> 
-                        <a href="./flowers-pages/summer/anemone.html"></a>
-                        <img class="little-img" src="./flowers/vara 1.png" />
-                    </div>
-                    <div class="cart-description">
-                        <p>BUCHET – ANEMONE’S LOVE</p>
-                        <p class="cart-price">400.00 lei</p>
-                    </div>
-                    <div class="cart-quantity">
-                        <input class="cart-quantity-input" type="number" value="1">
-                        <button class="btn">REMOVE</button>
-                    </div> 
+                <div class="cart-description">
+                    <p class="cart-item-title">BUCHET – PEONY OF MAY</p>
+                    <p class="cart-price">300.00 lei</p>
                 </div>
-                <div class="cart-product">
-                    <div class="cart-img"> 
-                        <a href="./flowers-pages/autumn/dalii.html"></a>
-                        <img class="little-img" src="./flowers/toamna 2.png" />
-                    </div>
-                    <div class="cart-description">
-                        <p>BUCHET – PURPLE AND RED SMILES</p>
-                        <p class="cart-price">320.00 lei</p>
-                    </div>
-                    <div class="cart-quantity">
-                        <input class="cart-quantity-input" type="number" value="1">
-                        <button class="btn">REMOVE</button>
-                    </div> 
+                <div class="cart-quantity">
+                    <input class="cart-quantity-input" type="number" value="1">
+                    <button class="btn">REMOVE</button>
                 </div>
-                <div class="cart-total">
-                    <p><strong class="cart-total-title">Total:</strong></p>
-                    <p class="cart-total-price">1020.00 lei</p>
+            </div>
+            <div class="cart-product">
+                <div class="cart-img">
+                    <a href="./flowers-pages/summer/anemone.html"></a>
+                    <img class="little-img" src="./flowers/vara 1.png" />
                 </div>
+                <div class="cart-description">
+                    <p class="cart-item-title">BUCHET – ANEMONE’S LOVE</p>
+                    <p class="cart-price">400.00 lei</p>
                 </div>
+                <div class="cart-quantity">
+                    <input class="cart-quantity-input" type="number" value="1">
+                    <button class="btn">REMOVE</button>
+                </div>
+            </div>
+            <div class="cart-product">
+                <div class="cart-img">
+                    <a href="./flowers-pages/autumn/dalii.html"></a>
+                    <img class="little-img" src="./flowers/toamna 2.png" />
+                </div>
+                <div class="cart-description">
+                    <p class="cart-item-title">BUCHET – PURPLE AND RED SMILES</p>
+                    <p class="cart-price">320.00 lei</p>
+                </div>
+                <div class="cart-quantity">
+                    <input class="cart-quantity-input" type="number" value="1">
+                    <button class="btn">REMOVE</button>
+                </div>
+            </div> -->
+        <!-- <div class="cart-total">
+            <p><strong class="cart-total-title">Total:</strong></p>
+            <p class="cart-total-price">0 lei</p>
+        </div> -->
     </div>
-
+    <div id="totalDisplay" style="display: none">
+    <div class="cart-total">    
+        <p><strong class="cart-total-title">Total:</strong></p>
+        <p class="cart-total-price">0 lei</p>
+    </div>
+    </div>
 
     <div id="parent">
         <div id="leftSide">
@@ -115,20 +119,20 @@
             <div id="wishlist">
                 <p><strong>My wish list:</strong></p>
                 <!-- <div class="wishlist-product"> -->
-                    <!-- <div class="wishlist-img"> -->
-                        <!-- <a href="./flowers-pages/spring/peonies.html"></a> -->
-                        <!-- <img class="small-img" src="./flowers/primavara 1.png" /> -->
-                    <!-- </div> -->
-                    <!-- <div class=/"wishlist-description"> -->
-                        <!-- <p>BUCHET – PEONY OF MAY</p> -->
-                        <!-- <p>300.00 lei</p> -->
-                    <!-- </div> -->
+                <!-- <div class="wishlist-img"> -->
+                <!-- <a href="./flowers-pages/spring/peonies.html"></a> -->
+                <!-- <img class="small-img" src="./flowers/primavara 1.png" /> -->
+                <!-- </div> -->
+                <!-- <div class=/"wishlist-description"> -->
+                <!-- <p>BUCHET – PEONY OF MAY</p> -->
+                <!-- <p>300.00 lei</p> -->
+                <!-- </div> -->
                 <!-- </div>
                 <div class="wishlist-product">
                     <div class="wishlist-img"> -->
-                        <!-- <a href="./flowers-pages/summer/anemone.html"></a> -->
-                        <!-- <img class="small-img" src="./flowers/vara 1.png" /> -->
-                    <!-- </div>
+                <!-- <a href="./flowers-pages/summer/anemone.html"></a> -->
+                <!-- <img class="small-img" src="./flowers/vara 1.png" /> -->
+                <!-- </div>
                     <div class="wishlist-description">
                         <p>BUCHET – ANEMONE’S LOVE</p>
                         <p>400.00 lei</p>
@@ -136,8 +140,8 @@
                 </div>
                 <div class="wishlist-product">
                     <div class="wishlist-img"> -->
-                        <!-- <a href="./flowers-pages/autumn/dalii.html"></a> -->
-                        <!-- <img class="small-img" src="./flowers/toamna 2.png" />
+                <!-- <a href="./flowers-pages/autumn/dalii.html"></a> -->
+                <!-- <img class="small-img" src="./flowers/toamna 2.png" />
                     </div>
                     <div class="wishlist-description">
                         <p>BUCHET – PURPLE AND RED SMILES</p>
@@ -148,6 +152,22 @@
 
             <div id="bestSellers">
                 <p><strong>Best sellers:</strong></p>
+                <div class="wishlist-img"> 
+                    <a href="./flowers-pages/spring/peonies.html"></a> 
+                    <img class="small-img" src="./flowers/primavara 1.png" />
+                </div>
+                <div class="wishlist-description">
+                    <p>BUCHET – PEONY OF MAY</p>
+                    <p>300.00 lei</p>
+                </div> 
+                <div class="wishlist-img"> 
+                    <a href="./flowers-pages/winter/roses.html"></a> 
+                    <img class="small-img" src="./flowers/iarna 1.png" />
+                </div>
+                <div class="wishlist-description">
+                    <p>BUCHET – HEART OF ROSE</p>
+                    <p>250.00 lei</p>
+                </div> 
             </div>
         </div>
         <div id="rightSide">
@@ -156,99 +176,52 @@
                 <div class="season">
                     <div class="product">
                         <div class="product-img">
-                            <a href="./flowers-pages/spring/peonies.html"><img src="./flowers/primavara 1.png" /></a>
+                            <a href="./flowers-pages/spring/peonies.html"><img class="item-img"
+                                    src="./flowers/primavara 1.png" /></a>
                         </div>
                         <div class="product-description">
-                            <h3>BUCHET – PEONY OF MAY</h3>
-                            <p>300.00 lei</p>
-                        </div*
+                            <h3 class="item-title">BUCHET – PEONY OF MAY</h3>
+                            <p class="item-price">300.00 lei</p>
+                        </div>
                         <div class="myWishlist">
                             <button class="add-to-wishlist">Add to wishlist</button>
                         </div>
                         <div class="myCart">
-                            <button class="add-to-cart">Add to cart</button>
+                            <button class="add-to-cart shop-btn">Add to cart</button>
                         </div>
                     </div>
 
                     <div class="product">
                         <div class="product-img">
-                            <a href="./flowers-pages/spring/tulips.html"><img src="./flowers/primavara 2.png" /></a>
+                            <a href="./flowers-pages/spring/tulips.html"><img class="item-img"
+                                    src="./flowers/primavara 2.png" /></a>
                         </div>
                         <div class="product-description">
-                            <h3>BUCHET – WONDERFUL TULIPS</h3>
-                            <p>200.00 lei</p>
+                            <h3 class="item-title">BUCHET – WONDERFUL TULIPS</h3>
+                            <p class="item-price">200.00 lei</p>
                         </div>
                         <div class="myWishlist">
                             <button class="add-to-wishlist">Add to wishlist</button>
                         </div>
                         <div class="myCart">
-                            <button class="add-to-cart">Add to cart</button>
+                            <button class="add-to-cart shop-btn">Add to cart</button>
                         </div>
                     </div>
 
                     <div class="product">
                         <div class="product-img">
-                            <a href="./flowers-pages/spring/liliac.html"><img src="./flowers/primavara 3.png" /></a>
+                            <a href="./flowers-pages/spring/liliac.html"><img class="item-img"
+                                    src="./flowers/primavara 3.png" /></a>
                         </div>
                         <div class="product-description">
-                            <h3>BUCHET – THAT’S AMORE</h3>
-                            <p>120.00 lei</p>
+                            <h3 class="item-title">BUCHET – THAT’S AMORE</h3>
+                            <p class="item-price">120.00 lei</p>
                         </div>
                         <div class="myWishlist">
                             <button class="add-to-wishlist">Add to wishlist</button>
                         </div>
                         <div class="myCart">
-                            <button class="add-to-cart">Add to cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="season">
-                    <div class="product">
-                        <div class="product-img">
-                            <a href="./flowers-pages/summer/anemone.html"><img src="./flowers/vara 1.png" /></a>
-                        </div>
-                        <div class="product-description">
-                            <h3>BUCHET – ANEMONE’S LOVE</h3>
-                            <p>400.00 lei</p>
-                        </div>
-                        <div class="myWishlist">
-                            <button class="add-to-wishlist">Add to wishlist</button>
-                        </div>
-                        <div class="myCart">
-                            <button class="add-to-cart">Add to cart</button>
-                        </div>
-                    </div>
-
-                    <div class="product">
-                        <div class="product-img">
-                            <a href="./flowers-pages/summer/frezii.html"><img src="./flowers/vara 2.png" /></a>
-                        </div>
-                        <div class="product-description">
-                            <h3>BUCHET – WONDERFUL FREESIAS</h3>
-                            <p>230.00 lei</p>
-                        </div>
-                        <div class="myWishlist">
-                            <button class="add-to-wishlist">Add to wishlist</button>
-                        </div>
-                        <div class="myCart">
-                            <button class="add-to-cart">Add to cart</button>
-                        </div>
-                    </div>
-
-                    <div class="product">
-                        <div class="product-img">
-                            <a href="./flowers-pages/summer/hortensii.html"><img src="./flowers/vara 3.png" /></a>
-                        </div>
-                        <div class="product-description">
-                            <h3> BUCHET – PURPLE SPIRIT</h3>
-                            <p>500.00 lei</p>
-                        </div>
-                        <div class="myWishlist">
-                            <button class="add-to-wishlist">Add to wishlist</button>
-                        </div>
-                        <div class="myCart">
-                            <button class="add-to-cart">Add to cart</button>
+                            <button class="add-to-cart shop-btn">Add to cart</button>
                         </div>
                     </div>
                 </div>
@@ -256,49 +229,105 @@
                 <div class="season">
                     <div class="product">
                         <div class="product-img">
-                            <a href="./flowers-pages/autumn/gerbere.html"><img src="./flowers/toamna 1.png" /></a>
+                            <a href="./flowers-pages/summer/anemone.html"><img class="item-img"
+                                    src="./flowers/vara 1.png" /></a>
                         </div>
                         <div class="product-description">
-                            <h3>BUCHET – PEACH BOUQUET</h3>
-                            <p>150.00 lei</p>
+                            <h3 class="item-title">BUCHET – ANEMONE’S LOVE</h3>
+                            <p class="item-price">400.00 lei</p>
                         </div>
                         <div class="myWishlist">
                             <button class="add-to-wishlist">Add to wishlist</button>
                         </div>
                         <div class="myCart">
-                            <button class="add-to-cart">Add to cart</button>
+                            <button class="add-to-cart shop-btn">Add to cart</button>
                         </div>
                     </div>
 
                     <div class="product">
                         <div class="product-img">
-                            <a href="./flowers-pages/autumn/dalii.html"><img src="./flowers/toamna 2.png" /></a>
+                            <a href="./flowers-pages/summer/frezii.html"><img class="item-img"
+                                    src="./flowers/vara 2.png" /></a>
                         </div>
                         <div class="product-description">
-                            <h3>BUCHET – PURPLE AND RED SMILES</h3>
-                            <p>320.00 lei</p>
+                            <h3 class="item-title">BUCHET – WONDERFUL FREESIAS</h3>
+                            <p class="item-price">230.00 lei</p>
                         </div>
                         <div class="myWishlist">
                             <button class="add-to-wishlist">Add to wishlist</button>
                         </div>
                         <div class="myCart">
-                            <button class="add-to-cart">Add to cart</button>
+                            <button class="add-to-cart shop-btn">Add to cart</button>
                         </div>
                     </div>
 
                     <div class="product">
                         <div class="product-img">
-                            <a href="./flowers-pages/autumn/crizanteme.html"><img src="./flowers/toamna 3.png" /></a>
+                            <a href="./flowers-pages/summer/hortensii.html"><img class="item-img"
+                                    src="./flowers/vara 3.png" /></a>
                         </div>
                         <div class="product-description">
-                            <h3>BUCHET – THE SMELL OF AUTUMN</h3>
-                            <p>80.00 lei</p>
+                            <h3 class="item-title"> BUCHET – PURPLE SPIRIT</h3>
+                            <p class="item-price">500.00 lei</p>
                         </div>
                         <div class="myWishlist">
                             <button class="add-to-wishlist">Add to wishlist</button>
                         </div>
                         <div class="myCart">
-                            <button class="add-to-cart">Add to cart</button>
+                            <button class="add-to-cart shop-btn">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="season">
+                    <div class="product">
+                        <div class="product-img">
+                            <a href="./flowers-pages/autumn/gerbere.html"><img class="item-img"
+                                    src="./flowers/toamna 1.png" /></a>
+                        </div>
+                        <div class="product-description">
+                            <h3 class="item-title">BUCHET – PEACH BOUQUET</h3>
+                            <p class="item-price">150.00 lei</p>
+                        </div>
+                        <div class="myWishlist">
+                            <button class="add-to-wishlist">Add to wishlist</button>
+                        </div>
+                        <div class="myCart">
+                            <button class="add-to-cart shop-btn">Add to cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product">
+                        <div class="product-img">
+                            <a href="./flowers-pages/autumn/dalii.html"><img class="item-img"
+                                    src="./flowers/toamna 2.png" /></a>
+                        </div>
+                        <div class="product-description">
+                            <h3 class="item-title">BUCHET – PURPLE AND RED SMILES</h3>
+                            <p class="item-price">320.00 lei</p>
+                        </div>
+                        <div class="myWishlist">
+                            <button class="add-to-wishlist">Add to wishlist</button>
+                        </div>
+                        <div class="myCart">
+                            <button class="add-to-cart shop-btn">Add to cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product">
+                        <div class="product-img">
+                            <a href="./flowers-pages/autumn/crizanteme.html"><img class="item-img"
+                                    src="./flowers/toamna 3.png" /></a>
+                        </div>
+                        <div class="product-description">
+                            <h3 class="item-title">BUCHET – THE SMELL OF AUTUMN</h3>
+                            <p class="item-price">80.00 lei</p>
+                        </div>
+                        <div class="myWishlist">
+                            <button class="add-to-wishlist">Add to wishlist</button>
+                        </div>
+                        <div class="myCart">
+                            <button class="add-to-cart shop-btn">Add to cart</button>
                         </div>
                     </div>
                 </div>
@@ -307,51 +336,52 @@
 
                     <div class="product">
                         <div class="product-img">
-                            <a href="./flowers-pages/winter/roses.html"><img src="./flowers/iarna 1.png" /></a>
+                            <a href="./flowers-pages/winter/roses.html"><img class="item-img"
+                                    src="./flowers/iarna 1.png" /></a>
                         </div>
                         <div class="product-description">
-                            <h3>BUCHET – HEART OF ROSE</h3>
-                            <p>250.00 lei</p>
+                            <h3 class="item-title">BUCHET – HEART OF ROSE</h3>
+                            <p class="item-price">250.00 lei</p>
                         </div>
                         <div class="myWishlist">
                             <button class="add-to-wishlist">Add to wishlist</button>
                         </div>
                         <div class="myCart">
-                            <button class="add-to-cart">Add to cart</button>
+                            <button class="add-to-cart shop-btn">Add to cart</button>
                         </div>
                     </div>
 
                     <div class="product">
                         <div class="product-img">
-                            <a href="./flowers-pages/winter/christmasFlower.html"><img
+                            <a href="./flowers-pages/winter/christmasFlower.html"><img class="item-img"
                                     src="./flowers/iarna 2.png" /></a>
                         </div>
                         <div class="product-description">
-                            <h3>BUCHET – ALWAYS WITH YOU</h3>
-                            <p>300.00 lei</p>
+                            <h3 class="item-title">BUCHET – ALWAYS WITH YOU</h3>
+                            <p class="item-price">300.00 lei</p>
                         </div>
                         <div class="myWishlist">
                             <button class="add-to-wishlist">Add to wishlist</button>
                         </div>
                         <div class="myCart">
-                            <button class="add-to-cart">Add to cart</button>
+                            <button class="add-to-cart shop-btn">Add to cart</button>
                         </div>
                     </div>
 
                     <div class="product">
                         <div class="product-img">
-                            <a href="./flowers-pages/winter/christmasFlower.html"><img
+                            <a href="./flowers-pages/winter/christmasFlower.html"><img class="item-img"
                                     src="./flowers/iarna 3.png" /></a>
                         </div>
                         <div class="product-description">
-                            <h3>BUCHET – CHRISTMAS SPIRIT</h3>
-                            <p>90.00 lei</p>
+                            <h3 class="item-title">BUCHET – CHRISTMAS SPIRIT</h3>
+                            <p class="item-price">90.00 lei</p>
                         </div>
                         <div class="myWishlist">
                             <button class="add-to-wishlist">Add to wishlist</button>
                         </div>
                         <div class="myCart">
-                            <button class="add-to-cart">Add to cart</button>
+                            <button class="add-to-cart shop-btns">Add to cart</button>
                         </div>
                     </div>
                 </div>

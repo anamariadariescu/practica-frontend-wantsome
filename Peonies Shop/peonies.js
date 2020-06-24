@@ -2,26 +2,20 @@
 var valueOfBouquet = document.getElementsByName('filter');
 
 for (i = 0; i < valueOfBouquet.length; i++) {
-    // console.log(productParentNode);
     valueOfBouquet[i].onclick = function () {
-        // console.log(productParentNode);
 
         productParentNode.innerHTML = '';
 
         var classSeason = document.createElement('div');
         classSeason.className = 'season';
-        // classSeason.innerHTML = 'season';
         productParentNode.appendChild(classSeason);
 
 
-        // console.log(this.value);
 
         switch (this.value) {
             case '50 - 99':
                 for (i = 0; i < priceArrays.length; i++) {
                     if (priceArrays[i] >= 50 && priceArrays[i] <= 99) {
-                        // productParentNode.appendChild(productNodes[i]);
-                        // console.log(productNodes[i]);
                         classSeason.appendChild(productNodes[i])
                     }
                 }
@@ -85,194 +79,189 @@ for (i = 0; i < myProductsPrice.length; i++) {
 
 
 var seasonParent = document.querySelectorAll('.season');
-// console.log(seasonParent);
 
 var springSeason = document.querySelectorAll('.season')[0];
-// console.log(springSeason);
 
 var summerSeason = document.querySelectorAll('.season')[1];
-// console.log(summerSeason);
 
 var autumnSeason = document.querySelectorAll('.season')[2];
-// console.log(autumnSeason);
 
 var winterSeason = document.querySelectorAll('.season')[3];
-// console.log(winterSeason);
 
 var whichSeason = document.getElementsByName('season');
-// console.log(whichSeason)
 
-// for (i = 0; i < whichSeason.length; i++) {
-//     console.log(whichSeason[i]);
-//     whichSeason[i].onclick = function () {
-//         productParentNode.innerHTML = '';
-//         // console.log(this.value);
-//         switch (this.value) {
-//             case 'Spring':
-//                 productParentNode.appendChild(springSeason)
-//                 break;
+    // WISHLIST
 
-//             case 'Summer':
-//                 productParentNode.appendChild(summerSeason)
-//                 break;
+    var myWishlist = document.getElementsByClassName("add-to-wishlist");
+    var wishlistParent = document.getElementById('wishlist')
 
-//             case 'Autumn':
-//                 productParentNode.appendChild(autumnSeason)
-//                 break;
+    for (i = 0; i < myWishlist.length; i++) {
+        myWishlist[i].onclick = function () {
+            wishlistScheleton();
 
-//             case 'Winter':
-//                 productParentNode.appendChild(winterSeason)
-//                 break;
-//         }
-//     }
-// }
+            cloneWishlistProduct(this);   
+        }
+    }
 
-// document.getElementsByClassName(".add-to-wishlist").addEventListener("onclick", function(){
-//     alert ("Hello World!")
-//   });
+    var classWishlistProduct = document.createElement('div');
+    var classWishlistDescription = document.createElement('div');
+    var classWishlistImg = document.createElement('div');
 
-var myWishlist = document.getElementsByClassName("add-to-wishlist");
-var wishlistParent = document.getElementById('wishlist')
-// console.log(wishlist)
-
-for (i = 0; i < myWishlist.length; i++) {
-    myWishlist[i].onclick = function () {
-
-        //create scheleton for wishlist
-        var classWishlistProduct = document.createElement('div');
+    //create scheleton for wishlist
+    function wishlistScheleton() {
         classWishlistProduct.className = 'wishlist-product';
         wishlistParent.appendChild(classWishlistProduct);
 
-        var classWishlistImg = document.createElement('div');
         classWishlistImg.className = 'wishlist-img';
         classWishlistProduct.appendChild(classWishlistImg);
 
-        var classWishlistDescription = document.createElement('div');
         classWishlistDescription.className = 'wishlist-description';
         classWishlistProduct.appendChild(classWishlistDescription);
+    };
 
-        // clone wishlist products
-        var product = this.parentNode.parentNode
+    // clone wishlist products
+    function cloneWishlistProduct($this) {
+        var product = $this.parentNode.parentNode;
         var img = product.getElementsByClassName('product-img')[0].getElementsByTagName('img')[0].getAttribute('src');
 
         var paragraph1 = product.getElementsByClassName('product-description')[0].getElementsByTagName('h3')[0].innerHTML;
-        // console.log(paragraph1);
 
         var paragraph2 = product.getElementsByClassName('product-description')[0].getElementsByTagName('p')[0].innerHTML;
-        // console.log(paragraph2);
 
+        cloneWishlistImg(img, paragraph1, paragraph2);
+    };
 
-        //clone image
+    //clone wishlist images
+    function cloneWishlistImg($img, $paragraph1, $paragraph2) {
         var sourceImage = document.createElement('img');
         sourceImage.classList.add('small-img');
-        sourceImage.src = img;
+        sourceImage.src = $img;
         classWishlistImg.appendChild(sourceImage);
 
         var sourceParagraph1 = document.createElement('p');
-        sourceParagraph1.textContent = paragraph1;
-
+        sourceParagraph1.textContent = $paragraph1;
         classWishlistDescription.appendChild(sourceParagraph1);
-        // classWishlistDescription.appendChild.paragraph1;
 
         var sourceParagraph2 = document.createElement('p');
-        sourceParagraph2.textContent = paragraph2;
+        sourceParagraph2.textContent = $paragraph2;
         classWishlistDescription.appendChild(sourceParagraph2);
-        // classWishlistDescription.appendChild.paragraph2;
-
     }
-}
+    
+    // CART
+    
+    var myCart = document.getElementsByClassName("add-to-cart");
+    var cartParent = document.getElementById("cart");
+    var classCartItems = document.createElement('div');
+    classCartItems.className = "cart-items";
+    cartParent.appendChild(classCartItems);
 
-var myCart = document.getElementsByClassName("add-to-cart");
-// console.log(myCart);
-var cartParent = document.getElementById("cart");
+    for (i = 0; i < myCart.length; i++ ) {
+        myCart[i].onclick = function() {
+            var cartId = document.getElementById('cart');
+            cartId.setAttribute("style", "display:block");
+            var cartId = document.getElementById('totalDisplay');
+            cartId.setAttribute("style", "display:block");
 
-for (i = 0; i < myCart.length; i++ ) {
-    myCart[i].onclick = function() {
+            var classCartProduct = document.createElement('div');
+            classCartProduct.className = "cart-product";
+            classCartItems.appendChild(classCartProduct);
 
-        //create scheleton for cart
-        var classCartProduct = document.createElement('div');
-        // console.log(classCartProduct)
-        classCartProduct.className = "cart-product";
-        cartParent.appendChild(classCartProduct);
+            var classCartImg = document.createElement('div');
+            classCartImg.className = "cart-img";
+            classCartProduct.appendChild(classCartImg);
 
-        var classCartImg = document.createElement('div');
-        classCartImg.className = "cart-img";
-        classCartProduct.appendChild(classCartImg);
+            var classCartDescription = document.createElement('div');
+            classCartDescription.className = "cart-description";
+            classCartProduct.appendChild(classCartDescription);
 
-        var classCartDescription = document.createElement('div');
-        classCartDescription.className = "cart-description";
-        classCartProduct.appendChild(classCartDescription);
+            var classCartQuantity = document.createElement('div');
+            classCartQuantity.className = "cart-quantity";
+            classCartProduct.appendChild(classCartQuantity);
 
-        var classCartQuantity = document.createElement('div');
-        classCartQuantity.className = "cart-quantity";
-        classCartProduct.appendChild(classCartQuantity);
+            var classCartQuantityInput = document.createElement('input');
+            classCartQuantityInput.className = "cart-quantity-input";
+            classCartQuantityInput.type = "number";
+            classCartQuantityInput.value = 1;
+            classCartQuantity.appendChild(classCartQuantityInput);
 
-        var classCartQuantityInput = document.createElement('input');
-        classCartQuantityInput.className = "cart-quantity-input";
-        classCartQuantityInput.type = "number";
-        classCartQuantityInput.value = 1;
-        classCartQuantity.appendChild(classCartQuantityInput);
+            var btn = document.createElement('button');
+            btn.className = "btn";
+            btn.textContent = "REMOVE";
+            classCartQuantity.appendChild(btn);
 
-        var btn = document.createElement('button');
-        btn.className = "btn";
-        btn.textContent = "REMOVE";
-        classCartQuantity.appendChild(btn);
+            // clone cart products
 
-        // clone wishlist products
-        var product = this.parentNode.parentNode
-        var img = product.getElementsByClassName('product-img')[0].getElementsByTagName('img')[0].getAttribute('src');
-        // console.log(img);
+            var product = this.parentNode.parentNode
+            var img = product.getElementsByClassName('product-img')[0].getElementsByTagName('img')[0].getAttribute('src');
 
-        var paragraph1 = product.getElementsByClassName('product-description')[0].getElementsByTagName('h3')[0].innerHTML;
-        // console.log(paragraph1)
+            var paragraph1 = product.getElementsByClassName('product-description')[0].getElementsByTagName('h3')[0].innerHTML;
 
-        var paragraph2 = product.getElementsByClassName('product-description')[0].getElementsByTagName('p')[0].innerHTML;
-        // console.log(paragraph2)
+            var paragraph2 = product.getElementsByClassName('product-description')[0].getElementsByTagName('p')[0].innerHTML;
 
-        //clone image
-        var sourceImage = document.createElement('img');
-        sourceImage.classList.add('little-img');
-        sourceImage.src = img;
-        classCartImg.appendChild(sourceImage);
+            //clone cart images
 
-        var sourceParagraph1 = document.createElement('p');
-        sourceParagraph1.textContent = paragraph1;
+            var sourceImage = document.createElement('img');
+            sourceImage.classList.add('little-img');
+            sourceImage.src = img;
+            classCartImg.appendChild(sourceImage);
 
-        classCartDescription.appendChild(sourceParagraph1);
-        // classWishlistDescription.appendChild.paragraph1;
+            var sourceParagraph1 = document.createElement('p');
+            sourceParagraph1.className = 'cart-item-title';
+            sourceParagraph1.textContent = paragraph1;
+            classCartDescription.appendChild(sourceParagraph1);
 
-        var sourceParagraph2 = document.createElement('p');
-        sourceParagraph2.textContent = paragraph2;
-        classCartDescription.appendChild(sourceParagraph2);
-        // classWishlistDescription.appendChild.paragraph2;   
+            var sourceParagraph2 = document.createElement('p');
+            sourceParagraph2.className = 'cart-price';
+            sourceParagraph2.textContent = paragraph2;
+            classCartDescription.appendChild(sourceParagraph2);
+            
+            //REMOVE
+
+            var removeCartItemButtons = document.getElementsByClassName('btn');
+
+            for (i = 0; i < removeCartItemButtons.length; i++) {
+                var buttons = removeCartItemButtons[i];
+                buttons.addEventListener('click', function(event) {
+                    var buttonClicked = event.target;
+                    buttonClicked.parentElement.parentElement.remove();
+                    updateCartTotal();
+                })
+            }
+
+            // QUANTITY
+
+            var quantityInputs = document.getElementsByClassName('cart-quantity-input');
+
+            for (i = 0; i < quantityInputs.length; i++) {
+                var input = quantityInputs[i];
+                input.addEventListener('change', quantityChanged)
+            }
+
+            updateCartTotal();
+        }
     }
-}
 
-var removeCartItemButtons = document.getElementsByClassName('btn');
-// console.log(removeCartItemButtons);
-
-for (i = 0; i < removeCartItemButtons.length; i++) {
-    var buttons = removeCartItemButtons[i];
-    buttons.addEventListener('click', function(event) {
-        // console.log("clicked");
-        var buttonClicked = event.target;
-        buttonClicked.parentElement.parentElement.remove();
-        updateCartTotal()
-    })
-}
-
-function updateCartTotal() {
-    var cartItemContainer = document.getElementsByClassName('cart-items')[0];
-    var cartProducts = cartItemContainer.getElementsByClassName('cart-product');
-    for (i = 0; i < cartProducts.length; i++) {
-        var cartProduct = cartProducts[i];
-        var priceBouquet = cartProduct.getElementsByClassName('cart-price')[0];
-        var quantityBouquet = cartProduct.getElementsByClassName('cart-quantity-input')[0];
-        // console.log(priceBouquet, quantityBouquet)
-        var priceElement = parseFloat(priceBouquet.innerText.replace('lei', ''));
-        // console.log(priceElement);
-        var quantityElement = quantityBouquet.value
-        console.log(priceElement * quantityElement)
-
+    function quantityChanged(event) {
+        var input = event.target;
+        if(isNaN(this.value) || input.value <= 0) {
+            input.value = 1
+        }
+        updateCartTotal();
     }
-}
+
+    function updateCartTotal() {
+        var cartProducts = classCartItems.getElementsByClassName('cart-product');
+        var total = 0;
+        for (i = 0; i < cartProducts.length; i++) {
+            var cartProduct = cartProducts[i];
+            var priceBouquet = cartProduct.getElementsByClassName('cart-price')[0];
+            console.log(priceBouquet);
+            var quantityBouquet = cartProduct.getElementsByClassName('cart-quantity-input')[0];
+            var priceElement = parseFloat(priceBouquet.innerText.replace('lei', ''));
+            var quantityElement = quantityBouquet.value;
+            total = total + (priceElement * quantityElement);
+        }
+
+        document.getElementsByClassName('cart-total-price')[0].innerText = total + ' lei';
+    }
+

@@ -106,3 +106,4 @@ var computeSumOfArrayElements = function(arr) {
   console.log(sum);
 };
 computeSumOfArrayElements([1,2,3,4]);
+
