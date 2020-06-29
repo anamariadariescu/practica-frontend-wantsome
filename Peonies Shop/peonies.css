@@ -7,6 +7,30 @@ nav {
     padding: 10px;
 }
 
+#descriere > a {
+    color: white;
+}
+
+#contactPage {
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+#informations {
+    font-size: 21px;
+    margin-left: 110px;
+    margin-right: 130px;
+    margin-top: 50px;
+}
+
+#contact > a {
+    color: white;
+}
+
+#informationsAboutUs {
+    font-size: 25px;
+}
+
 #mainMenu {
     font-size: 20px;
 }
