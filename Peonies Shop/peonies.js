@@ -265,3 +265,14 @@ var whichSeason = document.getElementsByName('season');
         document.getElementsByClassName('cart-total-price')[0].innerText = total + ' lei';
     }
 
+    var buyButton = document.getElementsByClassName('buy-button')[0];
+
+            buyButton.addEventListener('click', displayMessage);
+
+            function displayMessage() {
+                document.getElementById('cart').innerHTML = '';
+                var totalDisplayNone = document.getElementsByClassName('cart-total')[0];
+                totalDisplayNone.setAttribute('style', 'display: none');
+                location.reload();
+            }
+
